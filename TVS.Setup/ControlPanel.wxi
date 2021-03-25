@@ -1,0 +1,19 @@
+<Include xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Property Id="ARPCONTACT" Value="AMENCONSEIL" />
+  <Property Id="ARPPRODUCTICON" Value="ARPIcon" />
+  <Property Id="ARPHELPLINK" Value="http://www.amenconseil.com" />
+  <Property Id="ARPURLINFOABOUT" Value="Declaration" />
+  <Property Id="ARPHELPTELEPHONE" Value="(+216) 74 281 223" />
+  <Property Id="WixAppFolder" Value="Declaration" />
+  <Property Id="ApplicationFolderName" Value="Declaration" />
+
+  <Property Id="DATABASE_NAME" Value="DeclarationTvs" />
+  <Property Id="DATABASE_SERVERNAME" />
+  <Property Id="DATABASE_USERNAME" />
+  <Property Id="DATABASE_PASSWORD" />
+  <Property Id="WINDOWSAUTHENTICATION" Value="false" />
+
+  <Icon Id="ARPIcon" SourceFile="Files\Uninstall.ico" />
+  <Binary Id="BIN_ErrorBmp" SourceFile="Files\Uninstall.ico"></Binary>
+
+</Include>

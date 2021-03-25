@@ -1,0 +1,533 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6C79AEAD-E3AB-4967-8905-7ED980D8E5F5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TVS.Module.Liasse</RootNamespace>
+    <AssemblyName>TVS.Module.Liasse</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v17.1.UI, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Spreadsheet.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.1.UI, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.Wizard, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commandes\CommandeF6004ModeleAutorsie.cs" />
+    <Compile Include="Commandes\CommandeF6005.cs" />
+    <Compile Include="Commandes\CommandeF6004.cs" />
+    <Compile Include="Commandes\CommandeF6003.cs" />
+    <Compile Include="Commandes\CommandeF6002.cs" />
+    <Compile Include="Commandes\CommandeF6001.cs" />
+    <Compile Include="Commandes\CommandeF6304.cs" />
+    <Compile Include="Commandes\CommandeF6303.cs" />
+    <Compile Include="Commandes\CommandeF6301.cs" />
+    <Compile Include="Commandes\ExportCommandLiasseAtrribte.cs" />
+    <Compile Include="Forms\ImportForms\F6304ImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ImportForms\F6304ImportForm.Designer.cs">
+      <DependentUpon>F6304ImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ImportForms\F6303ImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ImportForms\F6303ImportForm.Designer.cs">
+      <DependentUpon>F6303ImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ImportForms\F6301ImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ImportForms\F6301ImportForm.Designer.cs">
+      <DependentUpon>F6301ImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ImportForms\F6005ImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ImportForms\F6005ImportForm.Designer.cs">
+      <DependentUpon>F6005ImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ImportForms\F6004ImportFormModeleAutorsie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ImportForms\F6004ImportFormModeleAutorsie.Designer.cs">
+      <DependentUpon>F6004ImportFormModeleAutorsie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ImportForms\F6004ImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ImportForms\F6004ImportForm.Designer.cs">
+      <DependentUpon>F6004ImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ImportForms\F6003ImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ImportForms\F6003ImportForm.Designer.cs">
+      <DependentUpon>F6003ImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ImportForms\F6002ImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ImportForms\F6002ImportForm.Designer.cs">
+      <DependentUpon>F6002ImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ImportForms\F600XImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ImportForms\F600XImportForm.Designer.cs">
+      <DependentUpon>F600XImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ImportForms\F6001ImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ImportForms\F6001ImportForm.Designer.cs">
+      <DependentUpon>F6001ImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6001Errorr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6001Errorr.Designer.cs">
+      <DependentUpon>XtraFrmF6001Errorr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6304Error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6304Error.Designer.cs">
+      <DependentUpon>XtraFrmF6304Error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6303Error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6303Error.Designer.cs">
+      <DependentUpon>XtraFrmF6303Error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6304.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6304.Designer.cs">
+      <DependentUpon>XtraFrmF6304.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6303.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6303.Designer.cs">
+      <DependentUpon>XtraFrmF6303.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6301Error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6301Error.Designer.cs">
+      <DependentUpon>XtraFrmF6301Error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6301.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6301.Designer.cs">
+      <DependentUpon>XtraFrmF6301.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6005Error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6005Error.Designer.cs">
+      <DependentUpon>XtraFrmF6005Error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6004ModeleAutoriseError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6004ModeleAutoriseError.Designer.cs">
+      <DependentUpon>XtraFrmF6004ModeleAutoriseError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6004Error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6004Error.Designer.cs">
+      <DependentUpon>XtraFrmF6004Error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6003Error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6003Error.Designer.cs">
+      <DependentUpon>XtraFrmF6003Error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6002Error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6002Error.Designer.cs">
+      <DependentUpon>XtraFrmF6002Error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6002.Designer.cs">
+      <DependentUpon>XtraFrmF6002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6001.Designer.cs">
+      <DependentUpon>XtraFrmF6001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6005.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6005.Designer.cs">
+      <DependentUpon>XtraFrmF6005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6004ModeleAutorsie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6004ModeleAutorsie.Designer.cs">
+      <DependentUpon>XtraFrmF6004ModeleAutorsie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6004.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6004.Designer.cs">
+      <DependentUpon>XtraFrmF6004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraFrmF6003.Designer.cs">
+      <DependentUpon>XtraFrmF6003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm6005.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm6005.Designer.cs">
+      <DependentUpon>Frm6005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmF6301.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmF6301.Designer.cs">
+      <DependentUpon>FrmF6301.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmF6004Mau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmF6004Mau.Designer.cs">
+      <DependentUpon>FrmF6004Mau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmF6004.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmF6004.Designer.cs">
+      <DependentUpon>FrmF6004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmF6001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmF6001.Designer.cs">
+      <DependentUpon>FrmF6001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmF6002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmF6002.Designer.cs">
+      <DependentUpon>FrmF6002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmF6003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmF6003.Designer.cs">
+      <DependentUpon>FrmF6003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LiasseController.cs" />
+    <Compile Include="Model\F6002.cs" />
+    <Compile Include="Model\F6001.cs" />
+    <Compile Include="Model\F6005.cs" />
+    <Compile Include="Model\F6004.cs" />
+    <Compile Include="Model\F6004ModeleAutorsie.cs" />
+    <Compile Include="Model\F6003.cs" />
+    <Compile Include="Model\F6301.cs" />
+    <Compile Include="Model\F6303.cs" />
+    <Compile Include="Model\F6304.cs" />
+    <Compile Include="Model\IF600X.cs" />
+    <Compile Include="Model\LigneLiasse.cs" />
+    <Compile Include="ModuleLiasse.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\TVS.Core.Models.Liass.F6001.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TVS.Config\TVS.Config.csproj">
+      <Project>{ba427a91-d4ba-4755-a225-ed6d7d08ef60}</Project>
+      <Name>TVS.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TVS.Core\TVS.Core.csproj">
+      <Project>{56fdccfb-4115-4b21-8e82-75a009c1db74}</Project>
+      <Name>TVS.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TVS.Dapper\TVS.Dapper.csproj">
+      <Project>{afecfd8e-e268-4c86-a6f1-9b0c8f697dff}</Project>
+      <Name>TVS.Dapper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\TVS.Core.Models.Liass.F6004ModeleAutorsie.datasource" />
+    <None Include="Properties\DataSources\TVS.Core.Models.Liass.F6301.datasource" />
+    <None Include="Properties\DataSources\TVS.Core.Models.Liass.F6303.datasource" />
+    <None Include="Properties\DataSources\TVS.Core.Models.Liass.F6304.datasource" />
+    <None Include="Properties\DataSources\TVS.Module.Liasse.Model.F6001.datasource" />
+    <None Include="Properties\DataSources\TVS.Module.Liasse.Model.F6002.datasource" />
+    <None Include="Properties\DataSources\TVS.Module.Liasse.Model.F6003.datasource" />
+    <None Include="Properties\DataSources\TVS.Module.Liasse.Model.F6004.datasource" />
+    <None Include="Properties\DataSources\TVS.Module.Liasse.Model.F6004ModeleAutorsie.datasource" />
+    <None Include="Properties\DataSources\TVS.Module.Liasse.Model.F6005.datasource" />
+    <None Include="Properties\DataSources\TVS.Module.Liasse.Model.F6301.datasource" />
+    <None Include="Properties\DataSources\TVS.Module.Liasse.Model.F6303.datasource" />
+    <None Include="Properties\DataSources\TVS.Module.Liasse.Model.F6304.datasource" />
+    <None Include="Resources\F6001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\ImportForms\F6304ImportForm.resx">
+      <DependentUpon>F6304ImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImportForms\F6303ImportForm.resx">
+      <DependentUpon>F6303ImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImportForms\F6301ImportForm.resx">
+      <DependentUpon>F6301ImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImportForms\F6005ImportForm.resx">
+      <DependentUpon>F6005ImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImportForms\F6004ImportFormModeleAutorsie.resx">
+      <DependentUpon>F6004ImportFormModeleAutorsie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImportForms\F6004ImportForm.resx">
+      <DependentUpon>F6004ImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImportForms\F6003ImportForm.resx">
+      <DependentUpon>F6003ImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImportForms\F6002ImportForm.resx">
+      <DependentUpon>F6002ImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImportForms\F600XImportForm.resx">
+      <DependentUpon>F600XImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImportForms\F6001ImportForm.resx">
+      <DependentUpon>F6001ImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFrmF6001Errorr.resx">
+      <DependentUpon>XtraFrmF6001Errorr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFrmF6304Error.resx">
+      <DependentUpon>XtraFrmF6304Error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFrmF6303Error.resx">
+      <DependentUpon>XtraFrmF6303Error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFrmF6304.resx">
+      <DependentUpon>XtraFrmF6304.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFrmF6303.resx">
+      <DependentUpon>XtraFrmF6303.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFrmF6301Error.resx">
+      <DependentUpon>XtraFrmF6301Error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFrmF6301.resx">
+      <DependentUpon>XtraFrmF6301.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFrmF6005Error.resx">
+      <DependentUpon>XtraFrmF6005Error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFrmF6004ModeleAutoriseError.resx">
+      <DependentUpon>XtraFrmF6004ModeleAutoriseError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFrmF6004Error.resx">
+      <DependentUpon>XtraFrmF6004Error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFrmF6003Error.resx">
+      <DependentUpon>XtraFrmF6003Error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFrmF6002Error.resx">
+      <DependentUpon>XtraFrmF6002Error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFrmF6002.resx">
+      <DependentUpon>XtraFrmF6002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFrmF6001.resx">
+      <DependentUpon>XtraFrmF6001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFrmF6005.resx">
+      <DependentUpon>XtraFrmF6005.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFrmF6004ModeleAutorsie.resx">
+      <DependentUpon>XtraFrmF6004ModeleAutorsie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFrmF6004.resx">
+      <DependentUpon>XtraFrmF6004.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraFrmF6003.resx">
+      <DependentUpon>XtraFrmF6003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm6005.resx">
+      <DependentUpon>Frm6005.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmF6301.resx">
+      <DependentUpon>FrmF6301.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmF6004Mau.resx">
+      <DependentUpon>FrmF6004Mau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmF6004.resx">
+      <DependentUpon>FrmF6004.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmF6001.resx">
+      <DependentUpon>FrmF6001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmF6002.resx">
+      <DependentUpon>FrmF6002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmF6003.resx">
+      <DependentUpon>FrmF6003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\TVS.Core.Models.Liass.F6002.datasource" />
+    <None Include="Properties\DataSources\TVS.Core.Models.Liass.F6003.datasource" />
+    <None Include="Properties\DataSources\TVS.Core.Models.Liass.F6004.datasource" />
+    <None Include="Properties\DataSources\TVS.Core.Models.Liass.F6005.datasource" />
+    <None Include="Resources\a1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F6002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F6003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F6004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F6005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sigma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ Bilan_Actifs _Libelles.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

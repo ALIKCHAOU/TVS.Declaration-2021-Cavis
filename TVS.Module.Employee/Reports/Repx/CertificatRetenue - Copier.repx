@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="17.1.4.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Certificat" Margins="14, 16, 18, 14" PageWidth="850" PageHeight="1100" Version="17.1" DataMember="LigneAnnexeUn" DataSource="#Ref-0">
+  <CalculatedFields>
+    <Item1 Ref="2" Name="cDate" Expression="Concat('A : Tunis le ',Today() )" />
+    <Item2 Ref="3" Name="cSocieteAdresse" Expression="Concat([Ville], ' ', [Rue], ' ', [CodePostal] )" DataMember="Societe" />
+    <Item3 Ref="4" Name="cSocieteIdentifiant" Expression="Concat([Matricule],[Cle],[Categorie],PadRight([EtablissementNumero],3 , '0') )" DataMember="Societe" />
+    <Item4 Ref="5" Name="cSituationFamiliale" Expression="Iif([SituationFamiliale] == 1, 'Célibataire', [SituationFamiliale] == 2, 'Marié', [SituationFamiliale] == 3, 'Divorcé', [SituationFamiliale] == 4, 'Veuf', ' ')" DataMember="LigneAnnexeUn" />
+    <Item5 Ref="6" Name="cTotalRevenuBrutImposable" Expression="[RevenuImposable] + [AventageEnNature]" DataMember="LigneAnnexeUn" />
+    <Item6 Ref="7" Name="cTotalRetenu" Expression="[RetenueRegimeCommun] + [RetenueTauxVingt]" DataMember="LigneAnnexeUn" />
+  </CalculatedFields>
+  <Bands>
+    <Item1 Ref="8" ControlType="TopMarginBand" Name="topMarginBand1" HeightF="18" />
+    <Item2 Ref="9" ControlType="DetailBand" Name="detailBand1" HeightF="100" />
+    <Item3 Ref="10" ControlType="BottomMarginBand" Name="bottomMarginBand1" HeightF="14" />
+    <Item4 Ref="11" ControlType="GroupHeaderBand" Name="GroupHeader1" HeightF="1042.125">
+      <Controls>
+        <Item1 Ref="12" ControlType="XRLabel" Name="label74" CanGrow="false" TextAlignment="MiddleCenter" SizeF="78.9165649,25" LocationFloat="631.9167, 872.5832" Font="Calibri, 10pt" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <DataBindings>
+            <Item1 Ref="13" FormatString="{0:0.000}" PropertyName="Text" DataMember="LigneAnnexeUn.ContributionSociale" />
+          </DataBindings>
+          <StylePriority Ref="14" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="15" ControlType="XRLabel" Name="label73" CanGrow="false" Text="Contribution Sociale" TextAlignment="MiddleCenter" SizeF="78.9165649,35" LocationFloat="631.9167, 837.5832" Font="Calibri, 9pt, style=Bold" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Top, Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <StylePriority Ref="16" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="17" ControlType="XRLabel" Name="label72" CanGrow="false" TextAlignment="MiddleCenter" SizeF="78.9165649,25" LocationFloat="631.9167, 361.416656" Font="Calibri, 10pt" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <DataBindings>
+            <Item1 Ref="18" FormatString="{0:0.000}" PropertyName="Text" DataMember="LigneAnnexeUn.ContributionSociale" />
+          </DataBindings>
+          <StylePriority Ref="19" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="20" ControlType="XRLabel" Name="label71" CanGrow="false" Text="Contribution Sociale" TextAlignment="MiddleCenter" SizeF="78.9165649,35" LocationFloat="631.9167, 326.416626" Font="Calibri, 9pt, style=Bold" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Top, Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <StylePriority Ref="21" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item4>
+        <Item5 Ref="22" ControlType="XRLabel" Name="label64" TextAlignment="MiddleLeft" SizeF="225.9164,23" LocationFloat="510.956573, 814.5833" Font="Calibri, 9pt" Padding="2,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="23" FormatString="Au : {0:dd/MM/yyyy}" PropertyName="Text" DataMember="LigneAnnexeUn.DateFinTravail" />
+          </DataBindings>
+          <StylePriority Ref="24" UseFont="false" UseTextAlignment="false" />
+        </Item5>
+        <Item6 Ref="25" ControlType="XRLabel" Name="label63" TextAlignment="MiddleLeft" SizeF="205.9584,23" LocationFloat="304.99826, 814.5833" Font="Calibri, 9pt" Padding="2,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="26" FormatString="Du : {0:dd/MM/yyyy}" PropertyName="Text" DataMember="LigneAnnexeUn.DateDebutTravail" />
+          </DataBindings>
+          <StylePriority Ref="27" UseFont="false" UseTextAlignment="false" />
+        </Item6>
+        <Item7 Ref="28" ControlType="XRLabel" Name="label62" TextAlignment="MiddleLeft" SizeF="242.7082,23" LocationFloat="9.998448, 814.5833" Font="Calibri, 9pt" Padding="2,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="29" FormatString="Période travail durant l'année : {0}" PropertyName="Text" DataMember="Societe.Exercice" />
+          </DataBindings>
+          <StylePriority Ref="30" UseFont="false" UseTextAlignment="false" />
+        </Item7>
+        <Item8 Ref="31" ControlType="XRLabel" Name="label61" TextAlignment="MiddleLeft" SizeF="93.3334,23" LocationFloat="390.623352, 924.5833" Font="Calibri, 9pt" Padding="2,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="32" FormatString="A: {0}" PropertyName="Text" DataMember="Societe.Ville" />
+          </DataBindings>
+          <StylePriority Ref="33" UseFont="false" UseTextAlignment="false" />
+        </Item8>
+        <Item9 Ref="34" ControlType="XRLabel" Name="label60" CanGrow="false" Text="Cachet et signature de l'emloyeur ou du débirentier" TextAlignment="MiddleCenter" SizeF="284.375,24" LocationFloat="490.62323, 947.583252" Font="Calibri, 9pt" Padding="2,2,0,0,100">
+          <StylePriority Ref="35" UseFont="false" UseTextAlignment="false" />
+        </Item9>
+        <Item10 Ref="36" ControlType="XRLabel" Name="label59" Text="et m'expose aux sanctions prévues par la loi pour toute inexactitude." TextAlignment="MiddleLeft" SizeF="362.4167,23" LocationFloat="9.998448, 924.5833" Font="Calibri, 9pt" Padding="5,2,0,0,100">
+          <StylePriority Ref="37" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item10>
+        <Item11 Ref="38" ControlType="XRLabel" Name="label58" Text="Je soussigné, certifie exacts et sincéres les renseignements figurant sur le présent certificat " TextAlignment="MiddleLeft" SizeF="500.9583,23" LocationFloat="9.998448, 901.583252" Font="Calibri, 9pt" Padding="5,2,0,0,100">
+          <StylePriority Ref="39" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item11>
+        <Item12 Ref="40" ControlType="XRLabel" Name="label57" TextAlignment="MiddleLeft" SizeF="351.0416,23" LocationFloat="9.998448, 791.5833" Font="Calibri, 9pt" Padding="5,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="41" FormatString="Emploi Occupé : {0}" PropertyName="Text" DataMember="LigneAnnexeUn.BeneficiaireActivite" />
+          </DataBindings>
+          <StylePriority Ref="42" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item12>
+        <Item13 Ref="43" ControlType="XRLabel" Name="label56" TextAlignment="MiddleCenter" SizeF="189.5833,23" LocationFloat="610.4149, 768.5832" Font="Calibri, 9.75pt" Padding="2,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="44" FormatString="N° CIN: {0}" PropertyName="Text" DataMember="LigneAnnexeUn.BeneficiaireIdentifiant" />
+          </DataBindings>
+          <StylePriority Ref="45" UseFont="false" UseTextAlignment="false" />
+        </Item13>
+        <Item14 Ref="46" ControlType="XRLabel" Name="label55" TextAlignment="MiddleLeft" SizeF="574.6249,23" LocationFloat="9.998448, 768.5832" Font="Calibri, 9pt" Padding="5,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="47" FormatString="Adresse: {0}" PropertyName="Text" DataMember="LigneAnnexeUn.BeneficiaireAdresse" />
+          </DataBindings>
+          <StylePriority Ref="48" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item14>
+        <Item15 Ref="49" ControlType="XRLabel" Name="label54" TextAlignment="MiddleLeft" SizeF="440,23.00002" LocationFloat="9.998322, 745.5832" Font="Calibri, 9pt" Padding="5,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="50" FormatString="Nom &amp; prénom :{0}" PropertyName="Text" DataMember="LigneAnnexeUn.BeneficiaireNomPrenom" />
+          </DataBindings>
+          <StylePriority Ref="51" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item15>
+        <Item16 Ref="52" ControlType="XRTable" Name="table2" SizeF="296.3333,50" LocationFloat="449.998352, 696.5833" Borders="All">
+          <Rows>
+            <Item1 Ref="53" ControlType="XRTableRow" Name="tableRow3" Weight="1">
+              <Cells>
+                <Item1 Ref="54" ControlType="XRTableCell" Name="tableCell3" Weight="1" Text="Situation familiale" TextAlignment="MiddleCenter" Font="Calibri, 10pt, style=Bold">
+                  <StylePriority Ref="55" UseFont="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="56" ControlType="XRTableCell" Name="tableCell6" Weight="1" Text="Nombres d'enfants" TextAlignment="MiddleCenter" Font="Calibri, 10pt, style=Bold">
+                  <StylePriority Ref="57" UseFont="false" UseTextAlignment="false" />
+                </Item2>
+              </Cells>
+            </Item1>
+            <Item2 Ref="58" ControlType="XRTableRow" Name="tableRow4" Weight="1">
+              <Cells>
+                <Item1 Ref="59" ControlType="XRTableCell" Name="tableCell7" Weight="1" TextAlignment="MiddleCenter" Font="Times New Roman, 10pt, style=Bold">
+                  <DataBindings>
+                    <Item1 Ref="60" PropertyName="Text" DataMember="LigneAnnexeUn.cSituationFamiliale" />
+                  </DataBindings>
+                  <StylePriority Ref="61" UseFont="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="62" ControlType="XRTableCell" Name="tableCell8" Weight="1" TextAlignment="MiddleCenter" Font="Times New Roman, 10pt, style=Bold">
+                  <DataBindings>
+                    <Item1 Ref="63" PropertyName="Text" DataMember="LigneAnnexeUn.NombreEnfant" />
+                  </DataBindings>
+                  <StylePriority Ref="64" UseFont="false" UseTextAlignment="false" />
+                </Item2>
+              </Cells>
+            </Item2>
+          </Rows>
+          <StylePriority Ref="65" UseBorders="false" UseBorderWidth="false" />
+        </Item16>
+        <Item17 Ref="66" ControlType="XRLabel" Name="label53" Text="B : Désignation du bénéficiaire :" TextAlignment="MiddleLeft" SizeF="242.7083,24" LocationFloat="9.998322, 721.5833" Font="Calibri, 9pt, style=Bold" Padding="5,2,0,0,100">
+          <StylePriority Ref="67" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item17>
+        <Item18 Ref="68" ControlType="XRPanel" Name="panel2" SizeF="810,100" LocationFloat="0.003306071, 591.5834" Borders="All">
+          <Controls>
+            <Item1 Ref="69" ControlType="XRLabel" Name="label48" TextAlignment="MiddleLeft" SizeF="790,24" LocationFloat="10.00001, 70.00002" Font="Calibri, 9pt" Padding="5,2,0,0,100" Borders="None">
+              <DataBindings>
+                <Item1 Ref="70" FormatString="Adresse: {0}" PropertyName="Text" DataMember="Societe.cSocieteAdresse" />
+              </DataBindings>
+              <StylePriority Ref="71" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="72" ControlType="XRLabel" Name="label49" TextAlignment="MiddleLeft" SizeF="790,23" LocationFloat="10.00001, 45.00002" Font="Calibri, 9pt" Padding="5,2,0,0,100" Borders="None">
+              <DataBindings>
+                <Item1 Ref="73" FormatString="Nom &amp; Prénom ou raison sociale : {0}" PropertyName="Text" DataMember="Societe.RaisonSocial" />
+              </DataBindings>
+              <StylePriority Ref="74" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item2>
+            <Item3 Ref="75" ControlType="XRLabel" Name="label50" Text="A : Employeur ou organisme payeur :" TextAlignment="MiddleLeft" SizeF="336.4583,24" LocationFloat="10.00001, 19" Font="Calibri, 9pt, style=Bold" Padding="5,2,0,0,100" Borders="None">
+              <StylePriority Ref="76" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item3>
+            <Item4 Ref="77" ControlType="XRLabel" Name="label51" TextAlignment="MiddleCenter" SizeF="231.6667,24" LocationFloat="505.2083, 19" Font="Calibri, 9pt, style=Bold" Padding="2,2,0,0,100">
+              <DataBindings>
+                <Item1 Ref="78" PropertyName="Text" DataMember="Societe.cSocieteIdentifiant" />
+              </DataBindings>
+              <StylePriority Ref="79" UseFont="false" UseTextAlignment="false" />
+            </Item4>
+            <Item5 Ref="80" ControlType="XRLabel" Name="label52" Text="IDENTIFIANT" TextAlignment="TopCenter" SizeF="231.6665,14.5" LocationFloat="505.2083, 4.500008" Font="Calibri, 9pt, style=Bold" Padding="2,2,0,0,100" Borders="None">
+              <StylePriority Ref="81" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item5>
+          </Controls>
+          <StylePriority Ref="82" UseBorders="false" />
+        </Item18>
+        <Item19 Ref="83" ControlType="XRLabel" Name="label47" SizeF="345.8333,16.75" LocationFloat="59.99832, 566.5833" Font="Calibri, 9pt, style=Bold" Padding="2,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="84" FormatString="RETENUE EFFECTUEE DURANT L'ANNEE : {0}" PropertyName="Text" DataMember="Societe.Exercice" />
+          </DataBindings>
+          <StylePriority Ref="85" UseFont="false" />
+        </Item19>
+        <Item20 Ref="86" ControlType="XRLabel" Name="label46" Text="CERTIFICAT DE RETENUE D'IMPOT SUR LE REVENU AU TITRE DES TRAITEMENTS, SALAIRES, PENSIONS ET RENTES VIAGERES" TextAlignment="TopCenter" SizeF="479.1667,37.58334" LocationFloat="240.623352, 522.8333" Font="Calibri, 9pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="87" UseFont="false" UseTextAlignment="false" />
+        </Item20>
+        <Item21 Ref="88" ControlType="XRLabel" Name="label45" Multiline="true" Text="REPUBLIQUE TUNISIENNE&#xD;&#xA;MINISTERE DE L'ECONOMIE ET DES FINANCES&#xD;&#xA;DIRECTION GENERALE DU CONTRÔLE FISCAL" TextAlignment="TopCenter" SizeF="215.625,43.83334" LocationFloat="0.003306071, 516.5833" Font="Calibri, 8pt" Padding="2,2,0,0,100">
+          <StylePriority Ref="89" UseFont="false" UseTextAlignment="false" />
+        </Item21>
+        <Item22 Ref="90" ControlType="XRLabel" Name="label44" CanGrow="false" Text="Revenue imposable (a)" TextAlignment="MiddleCenter" SizeF="134.99501,35" LocationFloat="0.003306071, 837.5832" Font="Calibri, 9pt, style=Bold" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="All" BorderWidth="1" BorderDashStyle="Solid">
+          <StylePriority Ref="91" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item22>
+        <Item23 Ref="92" ControlType="XRLabel" Name="label43" CanGrow="false" Text="Valeur des avantages en nature (b)" TextAlignment="MiddleCenter" SizeF="135,35" LocationFloat="134.998322, 837.5832" Font="Calibri, 9pt, style=Bold" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Top, Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <StylePriority Ref="93" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item23>
+        <Item24 Ref="94" ControlType="XRLabel" Name="label42" CanGrow="false" Text="Total du revenu brut imosable (a+b)" TextAlignment="MiddleCenter" SizeF="121.4583,35" LocationFloat="269.9983, 837.5832" Font="Calibri, 9pt, style=Bold" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Top, Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <StylePriority Ref="95" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item24>
+        <Item25 Ref="96" ControlType="XRLabel" Name="label41" CanGrow="false" Text="Revenu réinvesti" TextAlignment="MiddleCenter" SizeF="73.45868,35" LocationFloat="391.456635, 837.5832" Font="Calibri, 9pt, style=Bold" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Top, Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <StylePriority Ref="97" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item25>
+        <Item26 Ref="98" ControlType="XRLabel" Name="label40" CanGrow="false" Text="Montant des retenues" TextAlignment="MiddleCenter" SizeF="81.56906,35" LocationFloat="464.9153, 837.5832" Font="Calibri, 9pt, style=Bold" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Top, Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <StylePriority Ref="99" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item26>
+        <Item27 Ref="100" ControlType="XRLabel" Name="label39" CanGrow="false" Text="Revenu net des retenus" TextAlignment="MiddleCenter" SizeF="99.164856,35" LocationFloat="710.833252, 837.5832" Font="Calibri, 9pt, style=Bold" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Top, Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <StylePriority Ref="101" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item27>
+         <!--Item2 Ref="173" ControlType="XRTableCell" Name="tableCell6" Weight="1" TextAlignment="MiddleCenter" Font="Times New Roman, 10pt, style=Bold">
+                  <DataBindings>
+                    <Item1 Ref="174" PropertyName="Text" DataMember="LigneAnnexeUn.IntereDetectible" />
+                  </DataBindings>
+                  <StylePriority Ref="175" UseFont="false" UseTextAlignment="false" />
+                </Item2-->
+        <Item28 Ref="102" ControlType="XRLabel" Name="label38" CanGrow="false" Text="label23" TextAlignment="MiddleCenter" SizeF="134.99501,25" LocationFloat="0.003306071, 872.583252" Font="Calibri, 10pt" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Left, Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <DataBindings>
+            <Item1 Ref="103" FormatString="{0:0.000}" PropertyName="Text" DataMember="LigneAnnexeUn.RevenuImposable" />
+          </DataBindings>
+          <StylePriority Ref="104" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item28>
+        <Item29 Ref="105" ControlType="XRLabel" Name="label37" CanGrow="false" Text="label24" TextAlignment="MiddleCenter" SizeF="135,25" LocationFloat="134.998322, 872.583252" Font="Calibri, 10pt" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <DataBindings>
+            <Item1 Ref="106" FormatString="{0:0.000}" PropertyName="Text" DataMember="LigneAnnexeUn.AventageEnNature" />
+          </DataBindings>
+          <StylePriority Ref="107" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item29>
+        <Item30 Ref="108" ControlType="XRLabel" Name="label36" CanGrow="false" TextAlignment="MiddleCenter" SizeF="121.4583,25" LocationFloat="269.9983, 872.583252" Font="Calibri, 10pt" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <DataBindings>
+            <Item1 Ref="109" FormatString="{0:0.000}" PropertyName="Text" DataMember="LigneAnnexeUn.cTotalRevenuBrutImposable" />
+          </DataBindings>
+          <StylePriority Ref="110" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item30>
+        <Item31 Ref="111" ControlType="XRLabel" Name="label35" CanGrow="false" Text="label26" TextAlignment="MiddleCenter" SizeF="73.45862,25.000061" LocationFloat="391.456635, 872.583252" Font="Calibri, 10pt" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <DataBindings>
+            <Item1 Ref="112" FormatString="{0:0.000}" PropertyName="Text" DataMember="LigneAnnexeUn.RevenuReinvesti" />
+          </DataBindings>
+          <StylePriority Ref="113" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item31>
+        <Item32 Ref="114" ControlType="XRLabel" Name="label34" CanGrow="false" TextAlignment="MiddleCenter" SizeF="81.56906,25.000061" LocationFloat="464.9153, 872.583252" Font="Calibri, 10pt" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <DataBindings>
+            <Item1 Ref="115" FormatString="{0:0.000}" PropertyName="Text" DataMember="LigneAnnexeUn.cTotalRetenu" />
+          </DataBindings>
+          <StylePriority Ref="116" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item32>
+        <Item33 Ref="117" ControlType="XRLabel" Name="label33" CanGrow="false" Text="label28" TextAlignment="MiddleCenter" SizeF="99.16498,25.000061" LocationFloat="710.833252, 872.583252" Font="Calibri, 10pt" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <DataBindings>
+            <Item1 Ref="118" FormatString="{0:0.000}" PropertyName="Text" DataMember="LigneAnnexeUn.MontantNetServi" />
+          </DataBindings>
+          <StylePriority Ref="119" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item33>
+        <Item34 Ref="120" ControlType="XRLabel" Name="label68" CanGrow="false" TextAlignment="MiddleCenter" SizeF="85.43237,25.000061" LocationFloat="546.4843, 872.583252" Font="Calibri, 10pt" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <DataBindings>
+            <Item1 Ref="121" FormatString="{0:0.000}" PropertyName="Text" DataMember="LigneAnnexeUn.RevenuUnPourCent" />
+          </DataBindings>
+          <StylePriority Ref="122" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item34>
+        <Item35 Ref="123" ControlType="XRLabel" Name="label67" CanGrow="false" Text="Retenue 1%" TextAlignment="MiddleCenter" SizeF="85.43237,35" LocationFloat="546.4843, 837.5832" Font="Calibri, 9pt, style=Bold" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Top, Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <StylePriority Ref="124" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item35>
+        <Item36 Ref="125" ControlType="XRLabel" Name="label69" TextAlignment="TopCenter" SizeF="100,23" LocationFloat="563.9564, 924.5833" Font="Calibri, 9pt" Padding="2,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="126" FormatString="Le : 01/01/{0}" PropertyName="Text" DataMember="Societe.Exercice" />
+          </DataBindings>
+          <StylePriority Ref="127" UseFont="false" UseTextAlignment="false" />
+        </Item36>
+        <Item37 Ref="128" ControlType="XRLabel" Name="label28" CanGrow="false" Text="label28" TextAlignment="MiddleCenter" SizeF="101.666687,25" LocationFloat="710.833252, 361.416656" Font="Calibri, 10pt" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <DataBindings>
+            <Item1 Ref="129" FormatString="{0:0.000}" PropertyName="Text" DataMember="LigneAnnexeUn.MontantNetServi" />
+          </DataBindings>
+          <StylePriority Ref="130" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item37>
+        <Item38 Ref="131" ControlType="XRLabel" Name="label27" CanGrow="false" TextAlignment="MiddleCenter" SizeF="81.56909,25" LocationFloat="464.915283, 361.416656" Font="Calibri, 10pt" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <DataBindings>
+            <Item1 Ref="132" FormatString="{0:0.000}" PropertyName="Text" DataMember="LigneAnnexeUn.cTotalRetenu" />
+          </DataBindings>
+          <StylePriority Ref="133" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item38>
+        <Item39 Ref="134" ControlType="XRLabel" Name="label26" CanGrow="false" Text="label26" TextAlignment="MiddleCenter" SizeF="74.29196,25" LocationFloat="390.623352, 361.416656" Font="Calibri, 10pt" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <DataBindings>
+            <Item1 Ref="135" FormatString="{0:0.000}" PropertyName="Text" DataMember="LigneAnnexeUn.RevenuReinvesti" />
+          </DataBindings>
+          <StylePriority Ref="136" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item39>
+        <Item40 Ref="137" ControlType="XRLabel" Name="label25" CanGrow="false" TextAlignment="MiddleCenter" SizeF="118.123413,25" LocationFloat="272.499969, 361.416656" Font="Calibri, 10pt" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <DataBindings>
+            <Item1 Ref="138" FormatString="{0:0.000}" PropertyName="Text" DataMember="LigneAnnexeUn.cTotalRevenuBrutImposable" />
+          </DataBindings>
+          <StylePriority Ref="139" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item40>
+        <Item41 Ref="140" ControlType="XRLabel" Name="label24" CanGrow="false" Text="label24" TextAlignment="MiddleCenter" SizeF="135,25" LocationFloat="137.5, 361.416656" Font="Calibri, 10pt" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <DataBindings>
+            <Item1 Ref="141" FormatString="{0:0.000}" PropertyName="Text" DataMember="LigneAnnexeUn.AventageEnNature" />
+          </DataBindings>
+          <StylePriority Ref="142" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item41>
+        <Item42 Ref="143" ControlType="XRLabel" Name="label23" CanGrow="false" Text="label23" TextAlignment="MiddleCenter" SizeF="135,25" LocationFloat="2.50002551, 361.416656" Font="Calibri, 10pt" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Left, Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <DataBindings>
+            <Item1 Ref="144" FormatString="{0:0.000}" PropertyName="Text" DataMember="LigneAnnexeUn.RevenuImposable" />
+          </DataBindings>
+          <StylePriority Ref="145" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item42>
+        <Item43 Ref="146" ControlType="XRLabel" Name="label22" CanGrow="false" Text="Revenu net des retenus" TextAlignment="MiddleCenter" SizeF="101.666687,35" LocationFloat="710.833252, 326.416656" Font="Calibri, 9pt, style=Bold" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Top, Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          
+          <StylePriority Ref="147" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item43>
+        
+        <Item44 Ref="148" ControlType="XRLabel" Name="label21" CanGrow="false" Text="Montant des retenues" TextAlignment="MiddleCenter" SizeF="81.56909,35" LocationFloat="464.915283, 326.416656" Font="Calibri, 9pt, style=Bold" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Top, Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <StylePriority Ref="149" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item44>
+        <Item45 Ref="150" ControlType="XRLabel" Name="label20" CanGrow="false" Text="Revenu réinvesti" TextAlignment="MiddleCenter" SizeF="74.29193,35" LocationFloat="390.623383, 326.416656" Font="Calibri, 9pt, style=Bold" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Top, Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <StylePriority Ref="151" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item45>
+        <Item46 Ref="152" ControlType="XRLabel" Name="label19" CanGrow="false" Text="Total du revenu brut imosable (a+b)" TextAlignment="MiddleCenter" SizeF="118.123413,35" LocationFloat="272.499969, 326.416656" Font="Calibri, 9pt, style=Bold" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Top, Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <StylePriority Ref="153" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item46>
+        <Item47 Ref="154" ControlType="XRLabel" Name="label18" CanGrow="false" Text="Valeur des avantages en nature (b)" TextAlignment="MiddleCenter" SizeF="135,35" LocationFloat="137.5, 326.416656" Font="Calibri, 9pt, style=Bold" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Top, Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <StylePriority Ref="155" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item47>
+        <Item48 Ref="156" ControlType="XRLabel" Name="label17" CanGrow="false" Text="Revenue imposable (a)" TextAlignment="MiddleCenter" SizeF="135,35" LocationFloat="2.50002551, 326.416656" Font="Calibri, 9pt, style=Bold" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="All" BorderWidth="1" BorderDashStyle="Solid">
+          <StylePriority Ref="157" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item48>
+        <Item49 Ref="158" ControlType="XRLabel" Name="label9" Text="B : Désignation du bénéficiaire :" TextAlignment="MiddleLeft" SizeF="242.7083,24" LocationFloat="12.5, 210.416672" Font="Calibri, 9pt, style=Bold" Padding="5,2,0,0,100">
+          <StylePriority Ref="159" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item49>
+        <Item50 Ref="160" ControlType="XRTable" Name="table1" SizeF="296.3333,50" LocationFloat="452.500031, 185.416672" Borders="All">
+          <Rows>
+            <Item1 Ref="161" ControlType="XRTableRow" Name="tableRow1" Weight="1">
+              <Cells>
+                <Item1 Ref="162" ControlType="XRTableCell" Name="tableCell1" Weight="1" Text="Situation familiale" TextAlignment="MiddleCenter" Font="Calibri, 10pt, style=Bold">
+                  <StylePriority Ref="163" UseFont="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="164" ControlType="XRTableCell" Name="tableCell2" Weight="1" Text="Nombres d'enfants" TextAlignment="MiddleCenter" Font="Calibri, 10pt, style=Bold">
+                  <StylePriority Ref="165" UseFont="false" UseTextAlignment="false" />
+                </Item2>
+                <!--Item2 Ref="300" ControlType="XRTableCell" Name="tableCell3" Weight="1" Text="IntereDetectible" TextAlignment="MiddleCenter" Font="Calibri, 10pt, style=Bold">
+                  <StylePriority Ref="301" UseFont="false" UseTextAlignment="false" />
+                </Item2-->
+              </Cells>
+            </Item1>
+            <Item2 Ref="166" ControlType="XRTableRow" Name="tableRow2" Weight="1">
+              <Cells>
+                <Item1 Ref="167" ControlType="XRTableCell" Name="tableCell4" Weight="1" TextAlignment="MiddleCenter" Font="Times New Roman, 10pt, style=Bold">
+                  <DataBindings>
+                    <Item1 Ref="168" PropertyName="Text" DataMember="LigneAnnexeUn.cSituationFamiliale" />
+                  </DataBindings>
+                  <StylePriority Ref="169" UseFont="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="170" ControlType="XRTableCell" Name="tableCell5" Weight="1" TextAlignment="MiddleCenter" Font="Times New Roman, 10pt, style=Bold">
+                  <DataBindings>
+                    <Item1 Ref="171" PropertyName="Text" DataMember="LigneAnnexeUn.NombreEnfant" />
+                  </DataBindings>
+                  <StylePriority Ref="172" UseFont="false" UseTextAlignment="false" />
+                </Item2>
+
+                <!--Item2 Ref="173" ControlType="XRTableCell" Name="tableCell6" Weight="1" TextAlignment="MiddleCenter" Font="Times New Roman, 10pt, style=Bold">
+                  <DataBindings>
+                    <Item1 Ref="174" PropertyName="Text" DataMember="LigneAnnexeUn.IntereDetectible" />
+                  </DataBindings>
+                  <StylePriority Ref="175" UseFont="false" UseTextAlignment="false" />
+                </Item2-->
+              </Cells>
+            </Item2>
+          </Rows>
+          <StylePriority Ref="173" UseBorders="false" UseBorderWidth="false" />
+        </Item50>
+        <Item51 Ref="174" ControlType="XRLabel" Name="label10" TextAlignment="MiddleLeft" SizeF="440,23.00002" LocationFloat="12.5, 234.416641" Font="Calibri, 9pt" Padding="5,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="175" FormatString="Nom &amp; prénom :{0}" PropertyName="Text" DataMember="LigneAnnexeUn.BeneficiaireNomPrenom" />
+          </DataBindings>
+          <StylePriority Ref="176" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item51>
+        <Item52 Ref="177" ControlType="XRLabel" Name="label11" TextAlignment="MiddleLeft" SizeF="574.6248,23.00002" LocationFloat="12.5001268, 257.416656" Font="Calibri, 9pt" Padding="5,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="178" FormatString="Adresse: {0}" PropertyName="Text" DataMember="LigneAnnexeUn.BeneficiaireAdresse" />
+          </DataBindings>
+          <StylePriority Ref="179" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item52>
+        <Item53 Ref="180" ControlType="XRLabel" Name="label12" TextAlignment="MiddleCenter" SizeF="189.5833,23.00002" LocationFloat="612.916565, 257.416656" Font="Calibri, 9.75pt" Padding="2,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="181" FormatString="N° CIN: {0}" PropertyName="Text" DataMember="LigneAnnexeUn.BeneficiaireIdentifiant" />
+          </DataBindings>
+          <StylePriority Ref="182" UseFont="false" UseTextAlignment="false" />
+        </Item53>
+        <Item54 Ref="183" ControlType="XRLabel" Name="label13" TextAlignment="MiddleLeft" SizeF="351.0416,23" LocationFloat="12.5001268, 280.416565" Font="Calibri, 9pt" Padding="5,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="184" FormatString="Emploi Occupé : {0}" PropertyName="Text" DataMember="LigneAnnexeUn.BeneficiaireActivite" />
+          </DataBindings>
+          <StylePriority Ref="185" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item54>
+        <Item55 Ref="186" ControlType="XRLabel" Name="label15" Text="Je soussigné, certifie exacts et sincéres les renseignements figurant sur le présent certificat " TextAlignment="MiddleLeft" SizeF="500.9583,23" LocationFloat="12.5001268, 390.416656" Font="Calibri, 9pt" Padding="5,2,0,0,100">
+          <StylePriority Ref="187" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item55>
+        <Item56 Ref="188" ControlType="XRLabel" Name="label16" Text="et m'expose aux sanctions prévues par la loi pour toute inexactitude." TextAlignment="MiddleLeft" SizeF="362.4167,23" LocationFloat="12.5001268, 413.4167" Font="Calibri, 9pt" Padding="5,2,0,0,100">
+          <StylePriority Ref="189" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item56>
+        <Item57 Ref="190" ControlType="XRLabel" Name="label29" CanGrow="false" Text="Cachet et signature de l'emloyeur ou du débirentier" TextAlignment="MiddleCenter" SizeF="284.375,24" LocationFloat="493.1249, 436.416656" Font="Calibri, 9pt" Padding="2,2,0,0,100">
+          <StylePriority Ref="191" UseFont="false" UseTextAlignment="false" />
+        </Item57>
+        <Item58 Ref="192" ControlType="XRLabel" Name="label14" TextAlignment="MiddleLeft" SizeF="242.7082,23" LocationFloat="12.5001268, 303.416656" Font="Calibri, 9pt" Padding="2,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="193" FormatString="Période travail durant l'année : {0}" PropertyName="Text" DataMember="Societe.Exercice" />
+          </DataBindings>
+          <StylePriority Ref="194" UseFont="false" UseTextAlignment="false" />
+        </Item58>
+        <Item59 Ref="195" ControlType="XRLabel" Name="label31" TextAlignment="MiddleLeft" SizeF="205.9584,23" LocationFloat="307.499939, 303.416656" Font="Calibri, 9pt" Padding="2,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="196" FormatString="Du : {0:dd/MM/yyyy}" PropertyName="Text" DataMember="LigneAnnexeUn.DateDebutTravail" />
+          </DataBindings>
+          <StylePriority Ref="197" UseFont="false" UseTextAlignment="false" />
+        </Item59>
+        <Item60 Ref="198" ControlType="XRLabel" Name="label32" TextAlignment="MiddleLeft" SizeF="225.9164,23" LocationFloat="513.458252, 303.416656" Font="Calibri, 9pt" Padding="2,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="199" FormatString="Au : {0:dd/MM/yyyy}" PropertyName="Text" DataMember="LigneAnnexeUn.DateFinTravail" />
+          </DataBindings>
+          <StylePriority Ref="200" UseFont="false" UseTextAlignment="false" />
+        </Item60>
+        <Item61 Ref="201" ControlType="XRLabel" Name="label65" CanGrow="false" Text="Retenue 1%" TextAlignment="MiddleCenter" SizeF="85.43231,35" LocationFloat="546.4844, 326.416656" Font="Calibri, 9pt, style=Bold" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Top, Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <StylePriority Ref="202" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item61>
+        <Item62 Ref="203" ControlType="XRLabel" Name="label66" CanGrow="false" TextAlignment="MiddleCenter" SizeF="85.43237,25" LocationFloat="546.4843, 361.416656" Font="Calibri, 10pt" ForeColor="Black" BackColor="Transparent" Padding="2,2,0,0,100" BorderColor="Black" Borders="Right, Bottom" BorderWidth="1" BorderDashStyle="Solid">
+          <DataBindings>
+            <Item1 Ref="204" FormatString="{0:0.000}" PropertyName="Text" DataMember="LigneAnnexeUn.RevenuUnPourCent" />
+          </DataBindings>
+          <StylePriority Ref="205" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item62>
+        <Item63 Ref="206" ControlType="XRLabel" Name="label70" TextAlignment="TopCenter" SizeF="100,23" LocationFloat="566.4581, 413.4167" Font="Calibri, 9pt" Padding="2,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="207" FormatString="Le : 31/12/{0}" PropertyName="Text" DataMember="Societe.Exercice" />
+          </DataBindings>
+          <StylePriority Ref="208" UseFont="false" UseTextAlignment="false" />
+        </Item63>
+        <Item64 Ref="209" ControlType="XRLabel" Name="label30" TextAlignment="MiddleLeft" SizeF="93.3334,23" LocationFloat="393.125031, 413.4167" Font="Calibri, 9pt" Padding="2,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="210" FormatString="A: {0}" PropertyName="Text" DataMember="Societe.Ville" />
+          </DataBindings>
+          <StylePriority Ref="211" UseFont="false" UseTextAlignment="false" />
+        </Item64>
+        <Item65 Ref="212" ControlType="XRPanel" Name="panel1" SizeF="810,100" LocationFloat="0, 75" Borders="All">
+          <Controls>
+            <Item1 Ref="213" ControlType="XRLabel" Name="label8" TextAlignment="MiddleLeft" SizeF="790,24" LocationFloat="10, 70" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+              <DataBindings>
+                <Item1 Ref="214" FormatString="Adresse: {0}" PropertyName="Text" DataMember="Societe.cSocieteAdresse" />
+              </DataBindings>
+              <StylePriority Ref="215" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="216" ControlType="XRLabel" Name="label7" TextAlignment="MiddleLeft" SizeF="790,23" LocationFloat="10, 45" Font="Calibri, 9pt" Padding="5,2,0,0,100" Borders="None">
+              <DataBindings>
+                <Item1 Ref="217" FormatString="Nom &amp; Prénom ou raison sociale : {0}" PropertyName="Text" DataMember="Societe.RaisonSocial" />
+              </DataBindings>
+              <StylePriority Ref="218" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item2>
+            <Item3 Ref="219" ControlType="XRLabel" Name="label6" TextAlignment="MiddleCenter" SizeF="231.67,24" LocationFloat="505.21, 19" Font="Calibri, 9pt, style=Bold" Padding="2,2,0,0,100">
+              <DataBindings>
+                <Item1 Ref="220" PropertyName="Text" DataMember="Societe.cSocieteIdentifiant" />
+              </DataBindings>
+              <StylePriority Ref="221" UseFont="false" UseTextAlignment="false" />
+            </Item3>
+            <Item4 Ref="222" ControlType="XRLabel" Name="label5" Text="IDENTIFIANT" TextAlignment="TopCenter" SizeF="231.67,14.5" LocationFloat="505.21, 4.5" Font="Calibri, 9pt, style=Bold" Padding="2,2,0,0,100" Borders="None">
+              <StylePriority Ref="223" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item4>
+            <Item5 Ref="224" ControlType="XRLabel" Name="label4" Text="A : Employeur ou organisme payeur :" TextAlignment="MiddleLeft" SizeF="336.46,24" LocationFloat="10, 19" Font="Calibri, 9pt, style=Bold" Padding="5,2,0,0,100" Borders="None">
+              <StylePriority Ref="225" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item5>
+          </Controls>
+          <StylePriority Ref="226" UseBorders="false" />
+        </Item65>
+        <Item66 Ref="227" ControlType="XRLabel" Name="label3" SizeF="345.83,16.75" LocationFloat="60, 50" Padding="2,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="228" FormatString="RETENUE EFFECTUEE DURANT L'ANNEE : {0}" PropertyName="Text" DataMember="Societe.Exercice" />
+          </DataBindings>
+        </Item66>
+        <Item67 Ref="229" ControlType="XRLabel" Name="label2" Text="CERTIFICAT DE RETENUE D'IMPOT SUR LE REVENU AU TITRE DES TRAITEMENTS, SALAIRES, PENSIONS ET RENTES VIAGERES" TextAlignment="TopCenter" SizeF="479.17,37.58" LocationFloat="240.62, 6.25" Font="Calibri, 9pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="230" UseFont="false" UseTextAlignment="false" />
+        </Item67>
+        <Item68 Ref="231" ControlType="XRLabel" Name="label1" Multiline="true" Text="REPUBLIQUE TUNISIENNE&#xD;&#xA;MINISTERE DE L'ECONOMIE ET DES FINANCES&#xD;&#xA;DIRECTION GENERALE DU CONTRÔLE FISCAL" TextAlignment="TopCenter" SizeF="215.62,43.83" LocationFloat="0, 0" Font="Calibri, 8pt" Padding="2,2,0,0,100">
+          <StylePriority Ref="232" UseFont="false" UseTextAlignment="false" />
+        </Item68>
+        
+
+      </Controls>
+    </Item4>
+   
+  </Bands>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v17.1" Ref="0" Content="~Xtra#NULL" Type="TVS.Module.Employee.Reports.Datasets.DsCertificatRetenue" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

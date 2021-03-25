@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+  <Product Id="{8A85579B-38AC-4458-A270-4B4619B9E750}"
+           Name="Declaration"
+           Language="1033"
+           Version="1.010.10001"
+           Manufacturer="AMEN CONSEIL"
+           UpgradeCode="{8A85579B-29BC-4458-A270-4B4699B9E5C0}"
+           Codepage="1252">
+
+    <Package Id="*"
+             InstallerVersion="350"
+             Description="Declaration"
+             Comments="Declaration, CNSS"
+             Keywords="Declaration, Sage, SageX3"
+             Manufacturer="AMEN CONSEIL"
+             Languages="1033"
+             Compressed="yes"
+             Platform="x86"
+             SummaryCodepage="1252"
+             InstallScope="perMachine" />
+
+    <?include ControlPanel.wxi?>
+
+
+    <PropertyRef Id="NETFRAMEWORK40CLIENT" />
+    <PropertyRef Id="WIX_DIR_COMMON_DOCUMENTS" />
+    <Condition
+      Message="Cette application nécessite .NET Framework 4.0, Please install the .NET Framework then run this installer again.">
+      <![CDATA[Installed OR NETFRAMEWORK40CLIENT]]>
+    </Condition>
+    <Media Id="1" Cabinet="Product.cab" EmbedCab="yes" CompressionLevel="high" />
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="DIRMANUF" Name="AMEN CONSEIL ">
+          <Directory Id="INSTALLDIR" Name="Declaration">
+            <Directory Id="RESFR" Name="fr" />
+            <Directory Id="RESFR2" Name="fr" />
+            <!--<Directory Id="MOD" Name="Modules" />-->
+            <Directory Id="REPORTS_DIR" Name="DecEmpEtats" />
+            <Directory Id="REPORTS_VIRDIR" Name="Virement" />
+            <Directory Id="REPORTS_CNSSDIR" Name="CNSS" />
+            <Directory Id="IMPORTFILES_DIR" Name="Import" />
+            <Directory Id="Data" Name="data" />
+          </Directory>
+        </Directory>
+      </Directory>
+
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ProgramMenuFolderManuf" Name="AMEN CONSEIL">
+          <Directory Id="ProgramMenuFolderProg" Name="Declaration" />
+        </Directory>
+      </Directory>
+
+      <Directory Id="DesktopFolder" Name="Desktop" />
+
+      <Directory Id="WIX_DIR_COMMON_DOCUMENTS">
+        <Directory Id="MANUFACT_COMMON_FILES_DIR" Name="AMENCONSEIL">
+        </Directory>
+      </Directory>
+    </Directory>
+
+    <DirectoryRef Id="INSTALLDIR">
+
+
+      <Component Id="CompFiles" Guid="{857A859B-38AC-4458-A271-4B4619B9E750}">
+        <File Id="CastleCore" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\Castle.Core.dll" ReadOnly="yes" />
+        <File Id="Ninject" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\Ninject.dll"
+              ReadOnly="yes" />
+        <File Id="NinjectExtConvent" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\Ninject.Extensions.Conventions.dll" ReadOnly="yes" />
+        <File Id="NinjectExtFactory" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\Ninject.Extensions.Factory.dll" ReadOnly="yes" />
+        <File Id="CsvHelper" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\CsvHelper.dll" ReadOnly="yes" />
+        <File Id="EntityFramework01" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\EntityFramework.dll" ReadOnly="yes" />
+        <File Id="EntityFramework02" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\EntityFramework.SqlServer.dll" ReadOnly="yes" />
+        <File Id="Core" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\TVS.Core.dll"
+              ReadOnly="yes" />
+        <File Id="DapperDeclaration" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\TVS.Dapper.dll" ReadOnly="yes" />
+        <File Id="Dapper" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\Dapper.dll"
+              ReadOnly="yes" />
+        <File Id="DeclarationConfig" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\TVS.Config.dll" ReadOnly="yes" />
+       <File Id="ModuleCnss" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\TVS.Module.Cnss.dll" ReadOnly="yes" />
+        <File Id="ModuleEmployee" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\TVS.Module.Employee.dll" ReadOnly="yes" />
+        <File Id="ModuleVirement" DiskId="1" Vital="yes"
+           Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\TVS.Module.Virement.dll" ReadOnly="yes" />
+        <File Id="ModuleBcSuspension" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\TVS.Module.BcSuspenssion.dll" ReadOnly="yes" />
+        <File Id="ModuleFcSuspension" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\TVS.Module.FactureSuspenssion.dll" ReadOnly="yes" />
+        <File Id="ModuleLiasse" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\TVS.Module.Liasse.dll" ReadOnly="yes" />
+        <File Id="EFDeclaration" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\TVS.Ef.Migration.Declaration.dll" ReadOnly="yes" />
+        <File Id="DevExpress01" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.BonusSkins.v17.1.dll" ReadOnly="yes" />
+        <File Id="DevExpress02" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.Data.v17.1.dll" ReadOnly="yes" />
+        <File Id="DevExpress03" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.Images.v17.1.dll" ReadOnly="yes" />
+        <File Id="DevExpress05" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.Printing.v17.1.Core.dll" ReadOnly="yes" />
+        <File Id="DevExpress08" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.Utils.v17.1.dll" ReadOnly="yes" />
+        <File Id="DevExpress10" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.XtraBars.v17.1.dll" ReadOnly="yes" />
+        <File Id="DevExpress11" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.XtraEditors.v17.1.dll" ReadOnly="yes" />
+        <File Id="DevExpress12" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.XtraGrid.v17.1.dll" ReadOnly="yes" />
+        <File Id="DevExpress13" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.XtraLayout.v17.1.dll" ReadOnly="yes" />
+        <File Id="DevExpress15" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.XtraPrinting.v17.1.dll" ReadOnly="yes" />
+        <File Id="DevExpress17" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.XtraWizard.v17.1.dll" ReadOnly="yes" />
+        <File Id="DevExpress18" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.XtraReports.v17.1.dll" ReadOnly="yes" />
+        <File Id="DevExpress19" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.XtraTreeList.v17.1.dll" ReadOnly="yes" />
+        <File Id="DevExpress20" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.Sparkline.v17.1.Core.dll" ReadOnly="yes" />
+        <File Id="DevExpress21" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.DataAccess.v17.1.dll" ReadOnly="yes" />
+        <File Id="DevExpress22" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.Charts.v17.1.Core.dll" ReadOnly="yes" />
+        <File Id="DevExpress25" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.Pdf.v17.1.Core.dll" ReadOnly="yes" />
+        <File Id="DevExpress26" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.Pdf.v17.1.Drawing.dll" ReadOnly="yes" />
+        <File Id="DevExpress27" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.Office.v17.1.Core.dll" ReadOnly="yes" />
+        <File Id="DevExpress28" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.PivotGrid.v17.1.Core.dll" ReadOnly="yes" />
+        <File Id="DevExpress29" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.Utils.v17.1.UI.dll" ReadOnly="yes" />
+        <File Id="DevExpress30" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.XtraCharts.v17.1.Extensions.dll" ReadOnly="yes" />
+        <File Id="DevExpress31" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.RichEdit.v17.1.Core.dll" ReadOnly="yes" />
+        <File Id="DevExpress32" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.Xpo.v17.1.dll" ReadOnly="yes" />
+        <File Id="DevExpress33" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.XtraNavBar.v17.1.dll" ReadOnly="yes" />
+        <File Id="DevExpress34" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.XtraPivotGrid.v17.1.dll" ReadOnly="yes" />
+        <File Id="DevExpress35" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.XtraGauges.v17.1.Core.dll" ReadOnly="yes" />
+        <File Id="DevExpress36" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.XtraReports.v17.1.Extensions.dll" ReadOnly="yes" />
+        <File Id="DevExpress37" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.XtraCharts.v17.1.Wizard.dll" ReadOnly="yes" />
+        <File Id="DevExpress38" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.XtraVerticalGrid.v17.1.dll" ReadOnly="yes" />
+        <File Id="DevExpress39" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.DataAccess.v17.1.UI.dll" ReadOnly="yes" />
+        <File Id="DevExpress40" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.CodeParser.v17.1.dll" ReadOnly="yes" />
+        <File Id="DevExpress41" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.XtraCharts.v17.1.dll" ReadOnly="yes" />
+        <File Id="DevExpress42" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\DevExpress.XtraRichEdit.v17.1.dll" ReadOnly="yes" />
+       
+        <File Id="RhinoLicensing" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\Rhino.Licensing.dll" ReadOnly="yes" />
+        <File Id="log4" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\log4net.dll"
+              ReadOnly="yes" />
+        <File Id="publicKey" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\publicKey.xml" ReadOnly="yes" />
+        <File Id="FluentValidation" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\FluentValidation.dll" ReadOnly="yes" />
+        <File Id="appconfig" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\TVS.Declaration.exe.config" ReadOnly="no" />
+        <File Id="FileIcon" DiskId="1" Vital="yes" Source="Files\File.ico" ReadOnly="yes" />
+        <File Id="ProgramIcon" DiskId="1" Vital="yes" Source="Files\Program.ico" ReadOnly="yes" />
+
+        <CreateFolder>
+          <util:PermissionEx User="Users" GenericAll="yes" />
+        </CreateFolder>
+      </Component>
+
+      <Component Id="CompExecutable" Guid="{857A859B-38AC-4458-A272-4B4619B9E750}">
+        <File Id="MainExecutable" DiskId="1" Vital="yes" Checksum="yes" KeyPath="yes" ReadOnly="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\TVS.Declaration.exe">
+          <netfx:NativeImage Id="NGenExec" Dependencies="yes" Priority="0" Debug="no" Platform="32bit" />
+        </File>
+        <ProgId Id="[ProductName].File.dectv" Description="[ProductName] data file">
+          <Extension Id="dectv" ContentType="[ProductName]/dectv">
+            <Verb Id="open" Command="Open" TargetFile="MainExecutable" Argument="&quot;%1&quot;" />
+          </Extension>
+        </ProgId>
+        <RegistryValue Id="RegIconFileAssoc1" Root="HKCR" Key=".dectv" Action="write" Type="string"
+                       Value="[ProductName].File.dectv" />
+        <RegistryValue Id="RegIconFileAssoc2" Root="HKCR" Key="[ProductName].File.dectv" Action="write" Type="string"
+                       Value="[ProductName] data file" />
+        <RegistryValue Id="RegIconFileAssoc3" Root="HKCR" Key="[ProductName].File.dectv\DefaultIcon" Action="write"
+                       Type="string" Value="[INSTALLDIR]File.ico,0" />
+
+      </Component>
+    </DirectoryRef>
+
+
+    <DirectoryRef Id="REPORTS_DIR">
+      <Component Id="ReportFile" Guid="{8068A79B-29AC-4458-A277-4B4619B90991}">
+        <File Id="Etat01" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Module.Employee\Reports\repx\CertificatRetenue.repx"                           ReadOnly="no" />
+      </Component>
+    </DirectoryRef>
+
+    <DirectoryRef Id="REPORTS_CNSSDIR">
+      <Component Id="ReportFileCNSS" Guid="{DDE33FB5-7231-4F47-8649-E400749160A4}">
+        <File Id="Etat05" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Module.Cnss\Report\Repx\AttestationCNSS.repx"                           ReadOnly="no" />
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="REPORTS_VIRDIR">
+      <Component Id="ReportFileVirement" Guid="{8068A79B-29AC-4458-A277-4B4619B90881}">
+        <File Id="EtatBanque" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Module.Virement\Virement\Standard.repx"                           ReadOnly="no" />
+      </Component>
+    </DirectoryRef>
+
+    
+
+    <DirectoryRef Id="IMPORTFILES_DIR">
+      <Component Id="ImportFile" Guid="{8068A79B-29AC-4458-A277-4B4619B98781}">
+        <File Id="IMP01" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\ImportsFiles\BcSuspension.csv" ReadOnly="yes" />
+        <File Id="IMP02" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Declaration\ImportsFiles\FcSuspension.csv" ReadOnly="yes" />
+        <File Id="IMP03" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\ImportsFiles\CNSS.csv"
+              ReadOnly="yes" />
+        <File Id="IMP04" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Ef.Migration.Declaration\FilesImport2016\Annexe1.csv" ReadOnly="no" />
+        <File Id="IMP05" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Ef.Migration.Declaration\FilesImport2016\Annexe2.csv" ReadOnly="no" />
+        <File Id="IMP06" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Ef.Migration.Declaration\FilesImport2016\Annexe3.csv" ReadOnly="no" />
+        <File Id="IMP07" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Ef.Migration.Declaration\FilesImport2016\Annexe4.csv" ReadOnly="no" />
+        
+        
+        <File Id="IMP08" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Ef.Migration.Declaration\FilesImport2016\Annexe5.csv" ReadOnly="no" />
+        <File Id="IMP09" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Ef.Migration.Declaration\FilesImport2016\Annexe6.csv" ReadOnly="no" />
+        <File Id="IMP10" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Ef.Migration.Declaration\FilesImport2016\Annexe7.csv" ReadOnly="no" />
+        <File Id="IMP11" DiskId="1" Vital="yes"
+                Source="$(var.SolutionDir)\TVS.Ef.Migration.Declaration\FilesImport2018\Annexe1_2018.csv" ReadOnly="no" />
+        <File Id="IMP12" DiskId="1" Vital="yes"
+              Source="$(var.SolutionDir)\TVS.Ef.Migration.Declaration\FilesImport2016\Annexe4_2019.csv" ReadOnly="no" />
+
+
+      </Component>
+    </DirectoryRef>
+
+    <DirectoryRef Id="RESFR">
+      <Component Id="CompResFr" Guid="{8A85579B-38AC-4458-A277-4B4619B9E750}">
+        <File Id="DevExpFr01" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.Data.v17.1.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr02" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.DataAccess.v17.1.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr03" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.DataAccess.v17.1.UI.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr04" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.Diagram.v17.1.Core.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr05" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.Office.v17.1.Core.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr06" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.Pdf.v17.1.Core.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr07" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.PivotGrid.v17.1.Core.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr08" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.Printing.v17.1.Core.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr09" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.RichEdit.v17.1.Core.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr10" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.Sparkline.v17.1.Core.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr11" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.Utils.v17.1.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr12" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.Utils.v17.1.UI.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr13" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.Xpo.v17.1.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr14" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.XtraBars.v17.1.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr15" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.XtraCharts.v17.1.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr16" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.XtraCharts.v17.1.Wizard.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr17" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.XtraEditors.v17.1.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr18" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.XtraGauges.v17.1.Core.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr19" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.XtraGrid.v17.1.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr20" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.XtraLayout.v17.1.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr21" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.XtraNavBar.v17.1.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr22" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.XtraPivotGrid.v17.1.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr23" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.XtraPrinting.v17.1.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr24" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.XtraReports.v17.1.Extensions.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr25" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.XtraReports.v17.1.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr26" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.XtraRichEdit.v17.1.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr27" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.XtraTreeList.v17.1.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr28" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.XtraVerticalGrid.v17.1.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr29" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\DevExpress.XtraWizard.v17.1.resources.dll" ReadOnly="yes" />
+        <File Id="DevExpFr30" DiskId="1" Vital="yes" Source="$(var.SolutionDir)\TVS.Declaration\bin\Release\fr\FluentValidation.resources.dll" ReadOnly="yes" />
+
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="RESFR2">
+      <Component Id="CompResFr2" Guid="{8551A799-38AC-4458-A277-4B4619B9E750}">
+        <File Id="_F86C7B1F61C44480BEFA68A2D045D7BB" Name="TVS.Declaration.exe.config"
+              src="$(var.SolutionDir)\TVS.Declaration\bin\Release\TVS.Declaration.exe.config" Vital="yes" DiskId="1" />
+        <util:XmlFile Id="ModifyServiceLocation" Action="setValue"
+                      Name="connectionString"
+                      ElementPath="/configuration/connectionStrings/add"
+                      File="[INSTALLDIR]TVS.Declaration.exe.config"
+                      Value="Data Source=[DATABASE_SERVERNAME];Initial Catalog=[DATABASE_NAME];User Id=[DATABASE_USERNAME];Pwd=[DATABASE_PASSWORD];Integrated Security=[WINDOWSAUTHENTICATION]" />
+
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="ProgramMenuFolderManuf">
+      <Component Id="CompProgramMenuDirManuf" Guid="{8A85579B-38AC-4458-A273-4B4619B9E750}">
+        <RemoveFolder Id="ProgramMenuDirManuf" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Name="Installed" Type="integer"
+                       Value="1" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+
+    <DirectoryRef Id="ProgramMenuFolderProg">
+      <Component Id="CompProgramMenuDirProgShortcuts" Guid="{8A85579B-38AC-4458-A274-4B4619B9E750}">
+        <Shortcut Id="Shortcut1" Name="Declaration" Target="[INSTALLDIR]\TVS.Declaration.exe"
+                  WorkingDirectory="INSTALLDIR" Icon="IconProg" />
+        <Shortcut Id="UninstallProduct" Name="Désinstaller Déclaration" Description="Désinstaller l'application"
+                  Target="[System64Folder]msiexec.exe" Icon="ARPIcon" Arguments="/x [ProductCode]" />
+        <RemoveFolder Id="ProgramMenuDirProg" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Name="Installed" Type="integer"
+                       Value="1" KeyPath="yes" />
+        <Condition>1</Condition>
+      </Component>
+    </DirectoryRef>
+
+    <DirectoryRef Id="DesktopFolder">
+      <Component Id="CompDesktopShortcut" Guid="{8A85579B-38AC-4458-A275-4B4619B9E750}">
+        <Shortcut Id="Shortcut2" Name="Declaration" Target="[INSTALLDIR]\TVS.Declaration.exe"
+                  WorkingDirectory="INSTALLDIR" Icon="IconProg" />
+        <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Name="Installed" Type="integer"
+                       Value="1" KeyPath="yes" />
+        <Condition>1</Condition>
+      </Component>
+    </DirectoryRef>
+
+    <DirectoryRef Id="TARGETDIR">
+      <Component Id="CompRegistryEntries" Guid="{8A85579B-38AC-4458-A276-4B4619B9E750}">
+        <RegistryKey Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Action="createAndRemoveOnUninstall">
+          <RegistryValue Type="string" Name="Version" Value="1.010.10001" />
+          <RegistryValue Type="string" Name="Language" Value="fr" />
+          <RegistryValue Name="InstallDir" Type="string" Value="[INSTALLDIR]" />
+        </RegistryKey>
+
+        <RegistryKey Root="HKCU" Key="Software\[Manufacturer]\[ProductName]\Protections"
+                     Action="createAndRemoveOnUninstall">
+          <RegistryValue Type="string" Name="User" Value="&lt;Administrateur&gt;" KeyPath="yes" />
+        </RegistryKey>
+
+      </Component>
+    </DirectoryRef>
+
+    <Feature Id="Installation" Title="Declaration" Description="The complete package." Display="expand" Level="1"
+             Absent="disallow" ConfigurableDirectory="INSTALLDIR" AllowAdvertise="no">
+      <Feature Id="Files" Title="Main Files" Level="1" Display="0">
+        <ComponentRef Id="CompFiles" Primary="yes" />
+        <ComponentRef Id="CompResFr" Primary="yes" />
+        <ComponentRef Id="CompResFr2" Primary="yes" />
+    
+      </Feature>
+
+      <Feature Id="Excutable" Level="1">
+        <ComponentRef Id="CompExecutable" />
+        <ComponentRef Id="CompProgramMenuDirManuf" />
+        <ComponentRef Id="CompProgramMenuDirProgShortcuts" />
+        <ComponentRef Id="CompDesktopShortcut" />
+        <ComponentRef Id="CompRegistryEntries" />
+        <ComponentRef Id="ReportFile" />
+         <ComponentRef Id="ReportFileCNSS" />
+        
+        <ComponentRef Id="ReportFileVirement" />
+        <ComponentRef Id="ImportFile" />
+      </Feature>
+    </Feature>
+    <!--default value type authentification -->
+    <Property Id="DATABASE_WINDOWSAUTHENTICATION" Secure="yes" Value="1" />
+
+    <WixVariable Id="WixUILicenseRtf" Value="Files\License.rtf" />
+    <WixVariable Id="WixUIBannerBmp" Value="Files\banner.bmp" />
+    <WixVariable Id="WixUIDialogBmp" Value="Files\dialog.bmp" />
+    <WixVariable Id="WixUIExclamationIco" Value="Files\exclamation.ico" />
+    <WixVariable Id="WixUIInfoIco" Value="Files\information.ico" />
+    <WixVariable Id="WixUINewIco" Value="Files\new.ico" />
+    <WixVariable Id="WixUIUpIco" Value="Files\up.ico" />
+    <Binary Id="DataBaseCustomAction"
+            SourceFile="$(var.SolutionDir)\WixDataBase.CustomAction\bin\Release\WixDataBase.CustomAction.CA.dll" />
+
+    <Binary Id="Exclam.ico" SourceFile="Files\exclamation.ico" />
+    <Icon Id="IconProg" SourceFile="Files\Program.ico" />
+
+    <CustomAction Id="SetARPINSTALLLOCATION" Property="ARPINSTALLLOCATION" Value="[INSTALLDIR]" />
+    <CustomAction Id="CA_DataBaseTestConnection"
+                  BinaryKey="DataBaseCustomAction"
+                  DllEntry="TestSqlConnection"
+                  Execute="immediate"
+                  Return="check" />
+    <CustomAction Id="CA_SaveParamConnection"
+                  BinaryKey="DataBaseCustomAction"
+                  DllEntry="SaveParameterConnection"
+                  Execute="immediate"
+                  Return="ignore" />
+    <CustomAction Id="CA_DataBaseExecuteScripts"
+                  BinaryKey="DataBaseCustomAction"
+                  DllEntry="ExecuteSql"
+                  Execute="immediate"
+                  Impersonate="yes"
+                  Return="check" />
+
+    <UI Id="UserInterface">
+
+
+      <!-- FONT DEFINITION -->
+      <Property Id="TitleFont">{&amp;DlgFontBold8}</Property>
+      <Property Id="BigFont">{&amp;VerdanaBold13}</Property>
+      <TextStyle Id="DlgFont8" FaceName="Tahoma" Size="8" />
+      <TextStyle Id="DlgFontBold8" FaceName="Tahoma" Size="8" Bold="yes" />
+      <TextStyle Id="VerdanaBold13" FaceName="Verdana" Size="13" Bold="yes" />
+      <!-- END FONT DEFINITION -->
+
+
+      <DialogRef Id="FilesInUse" />
+      <UIRef Id="WixUI_InstallDir" />
+      <UIRef Id="WixUI_ErrorProgressText" />
+      <DialogRef Id="DataBaseServerDlg" />
+      <Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="LicenseAgreementDlg">1</Publish>
+      <Publish Dialog="LicenseAgreementDlg" Control="Next" Event="NewDialog" Value="DataBaseServerDlg">1</Publish>
+      <Property Id="WixUI_ServerDialogBack" Value="LicenseAgreementDlg" />
+      <Publish Dialog="DataBaseServerDlg" Control="Next" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+      <Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="DataBaseServerDlg">1</Publish>
+      <Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
+    </UI>
+
+    <InstallUISequence>
+      <Show Dialog="FatalError" OnExit="error" />
+      <Show Dialog="UserExit" OnExit="cancel" />
+      <Show Dialog="ExitDialog" OnExit="success" />
+      <Show Dialog="WelcomeDlg" Sequence="1" />
+    </InstallUISequence>
+    <InstallExecuteSequence>
+      <Custom Action='CA_DataBaseTestConnection' Before='InstallFinalize'>NOT Installed</Custom>
+      <Custom Action='CA_DataBaseExecuteScripts' Before="InstallFiles">NOT Installed</Custom>
+
+    </InstallExecuteSequence>
+
+
+  </Product>
+</Wix>

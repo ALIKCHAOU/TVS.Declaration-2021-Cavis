@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4B7C2A92-6D6C-4D22-A8C0-DBD20BEEC059}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TVS.Module.Employee</RootNamespace>
+    <AssemblyName>TVS.Module.Employee</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CsvHelper, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.2.16.3.0\lib\net45\CsvHelper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v15.2" />
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.2" />
+    <Reference Include="DevExpress.DataAccess.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v15.2.UI, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.ExpressApp.PivotGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2" />
+    <Reference Include="DevExpress.Sparkline.v15.2.Core" />
+    <Reference Include="DevExpress.Utils.v15.2.UI, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.Wizard, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2" />
+    <Reference Include="DevExpress.XtraGauges.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.2.Extensions, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="FluentValidation, Version=6.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.6.2.1.0\lib\Net45\FluentValidation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnnexeEnregistementHelper.cs" />
+    <Compile Include="Commandes\CommandeAnnexe1.cs" />
+    <Compile Include="Commandes\CommandeAnnexe3.cs" />
+    <Compile Include="Commandes\CommandeAnnexe5.cs" />
+    <Compile Include="Commandes\CommandeAnnexe6.cs" />
+    <Compile Include="Commandes\CommandeAnnexe4.cs" />
+    <Compile Include="Commandes\CommandeAnnexe2.cs" />
+    <Compile Include="Commandes\CommandeAnnexeRecap.cs" />
+    <Compile Include="Commandes\CommandeAnnexe7.cs" />
+    <Compile Include="Commandes\ExportDecEmpAtrribte.cs" />
+    <Compile Include="DalExport\ConsoleExportRepository.cs" />
+    <Compile Include="DalExport\IExportRepostiory.cs" />
+    <Compile Include="ExportDetailPropertie.cs" />
+    <Compile Include="ExportDetailShared.cs" />
+    <Compile Include="Imports\Interfaces\ILigneAnnexe1ImportRepository.cs" />
+    <Compile Include="Imports\Interfaces\ILigneAnnexe5ImportRepository.cs" />
+    <Compile Include="Imports\Interfaces\ILigneAnnexe2ImportRepository.cs" />
+    <Compile Include="Imports\Interfaces\ILigneAnnexe4ImportRepository.cs" />
+    <Compile Include="Imports\Interfaces\ILigneAnnexe7ImportRepository.cs" />
+    <Compile Include="Imports\Interfaces\ILigneAnnexe6ImportRepository.cs" />
+    <Compile Include="Imports\Interfaces\ILigneAnnexe3ImportRepository.cs" />
+    <Compile Include="Imports\Maps\LigneAnnexe1ImportMap.cs" />
+    <Compile Include="Imports\Maps\LigneAnnexe5ImportMap.cs" />
+    <Compile Include="Imports\Maps\LigneAnnexe3ImportMap.cs" />
+    <Compile Include="Imports\Maps\LigneAnnexe6ImportMap.cs" />
+    <Compile Include="Imports\Maps\LigneAnnexe4ImportMap.cs" />
+    <Compile Include="Imports\Maps\LigneAnnexe2ImportMap.cs" />
+    <Compile Include="Imports\Maps\LigneAnnexeSeptImportMap.cs" />
+    <Compile Include="Imports\Repsitory\LigneAnnexe2ImportRepository.cs" />
+    <Compile Include="Imports\Repsitory\LigneAnnexe1ImportRepository.cs" />
+    <Compile Include="Imports\Repsitory\LigneAnnexe5ImportRepository.cs" />
+    <Compile Include="Imports\Repsitory\LigneAnnexe3ImportRepository.cs" />
+    <Compile Include="Imports\Repsitory\LigneAnnexe4ImportRepository.cs" />
+    <Compile Include="Imports\Repsitory\LigneAnnexe6mportRepository.cs" />
+    <Compile Include="Imports\Repsitory\LigneAnnexeSeptImportRepository.cs" />
+    <Compile Include="Imports\Views\LigneAnnexe1ImportView.cs" />
+    <Compile Include="Imports\Views\LigneAnnexe5ImportView.cs" />
+    <Compile Include="Imports\Views\LigneAnnexe2ImportView.cs" />
+    <Compile Include="Imports\Views\LigneAnnexe4ImportView.cs" />
+    <Compile Include="Imports\Views\LigneAnnexe7ImportView.cs" />
+    <Compile Include="Imports\Views\LigneAnnexe6ImportView.cs" />
+    <Compile Include="Imports\Views\LigneAnnexe3ImportView.cs" />
+    <Compile Include="InitModule.cs" />
+    <Compile Include="Interfaces\IAnnexeCinqRepository.cs" />
+    <Compile Include="Interfaces\IAnnexeDeuxRepository.cs" />
+    <Compile Include="Interfaces\IAnnexeQuatreRepository.cs" />
+    <Compile Include="Interfaces\IAnnexeSeptRepository.cs" />
+    <Compile Include="Interfaces\IAnnexeSixRepository.cs" />
+    <Compile Include="Interfaces\IAnnexeTroisRepository.cs" />
+    <Compile Include="Interfaces\IAnnexeUnRepository.cs" />
+    <Compile Include="LigneAnnexeZoneValue.cs" />
+    <Compile Include="Models\Annexes\Annexe5.cs" />
+    <Compile Include="Models\Annexes\Annexe2.cs" />
+    <Compile Include="Models\Annexes\Annexe4.cs" />
+    <Compile Include="Models\Annexes\Annexe7.cs" />
+    <Compile Include="Models\Annexes\Annexe6.cs" />
+    <Compile Include="Models\Annexes\Annexe3.cs" />
+    <Compile Include="Models\Annexes\Annexe1.cs" />
+    <Compile Include="Models\EnteteAnnexe.cs" />
+    <Compile Include="Models\Enums\CodeActe.cs" />
+    <Compile Include="Models\Enums\SituationFamiliale.cs" />
+    <Compile Include="Models\Enums\TypeBenificiaire.cs" />
+    <Compile Include="Models\Enums\TypeMontantPayee.cs" />
+    <Compile Include="Models\Enums\TypeMontantServi.cs" />
+    <Compile Include="Models\ExportDetail.cs" />
+    <Compile Include="Models\IAnnexe.cs" />
+    <Compile Include="Models\IAnnexeEnregistrement.cs" />
+    <Compile Include="Models\IEnteteAnnexe.cs" />
+    <Compile Include="Models\ILigneAnnexe.cs" />
+    <Compile Include="Models\ILingeImportAnnexe.cs" />
+    <Compile Include="Models\IPiedAnnexe.cs" />
+    <Compile Include="Models\LignesAnnexes\LigneAnnexeBase.cs" />
+    <Compile Include="Models\LignesAnnexes\LigneAnnexe5.cs" />
+    <Compile Include="Models\LignesAnnexes\LigneAnnexe2.cs" />
+    <Compile Include="Models\LignesAnnexes\LigneAnnexe4.cs" />
+    <Compile Include="Models\LignesAnnexes\LigneAnnexe7.cs" />
+    <Compile Include="Models\LignesAnnexes\LigneAnnexe6.cs" />
+    <Compile Include="Models\LignesAnnexes\LigneAnnexe3.cs" />
+    <Compile Include="Models\LignesAnnexes\LigneAnnexe1.cs" />
+    <Compile Include="Models\Pieds\PiedAnnexe5.cs" />
+    <Compile Include="Models\Pieds\PiedAnnexe2.cs" />
+    <Compile Include="Models\Pieds\PiedAnnexe4.cs" />
+    <Compile Include="Models\Pieds\PiedAnnexe7.cs" />
+    <Compile Include="Models\Pieds\PiedAnnexe6.cs" />
+    <Compile Include="Models\Pieds\PiedAnnexe3.cs" />
+    <Compile Include="Models\Pieds\PiedAnnexe1.cs" />
+    <Compile Include="Models\Recap\AnnexeRecap.cs" />
+    <Compile Include="Models\Recap\EnteteRecap.cs" />
+    <Compile Include="Models\Recap\LigneRecap.cs" />
+    <Compile Include="Models\Recap\PiedRecap.cs" />
+    <Compile Include="Models\SharedDetailAnnexe.cs" />
+    <Compile Include="ModuleDeclarationEmployeur.cs" />
+    <Compile Include="PrintRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\CertificatRetenueReport.cs" />
+    <Compile Include="Reports\Commande\NewCommandHandler.cs" />
+    <Compile Include="Reports\Commande\OpenCommandHandler.cs" />
+    <Compile Include="Reports\Commande\SaveCommandHandler.cs" />
+    <Compile Include="Reports\Datasets\DsCertificatRetenue.cs">
+      <DependentUpon>DsCertificatRetenue.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Datasets\DsCertificatRetenue1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsCertificatRetenue.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DesignExtension.cs" />
+    <Compile Include="Reports\FrmReportDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmReportDesigner.designer.cs">
+      <DependentUpon>FrmReportDesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\reportAnnexUn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\reportAnnexUn.designer.cs">
+      <DependentUpon>reportAnnexUn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\Annexe5Repository.cs" />
+    <Compile Include="Repository\Annexe2Repository.cs" />
+    <Compile Include="Repository\Annexe4Repository.cs" />
+    <Compile Include="Repository\Annexe7Repository.cs" />
+    <Compile Include="Repository\Annexe6Repository.cs" />
+    <Compile Include="Repository\Annexe3Repository.cs" />
+    <Compile Include="Repository\Annexe1Repository.cs" />
+    <Compile Include="XRDesignRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XRDesignRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PrintRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Reports\FrmReportDesigner.resx">
+      <DependentUpon>FrmReportDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRDesignRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XRDesignRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Reports\Repx\CertificatRetenue.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\resources.designer.cs" />
+    <Compile Include="Services\Annexe1Service.cs" />
+    <Compile Include="Services\Annexe5Service.cs" />
+    <Compile Include="Services\Annexe3Service.cs" />
+    <Compile Include="Services\Annexe6Service.cs" />
+    <Compile Include="Services\Annexe4Service.cs" />
+    <Compile Include="Services\Annexe2Service.cs" />
+    <Compile Include="Services\Annexe7Service.cs" />
+    <Compile Include="Services\IAnnexeService.cs" />
+    <Compile Include="Services\RecapAnnexe7Service.cs" />
+    <Compile Include="Services\RecapService.cs" />
+    <Compile Include="UiAnnexe\DeclarationEmployeurController.cs" />
+    <Compile Include="UiAnnexe\FrmAnnexe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UiAnnexe\FrmAnnexe.designer.cs">
+      <DependentUpon>FrmAnnexe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UiAnnexe\FrmDeclaredAnnexe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UiAnnexe\FrmDeclaredAnnexe.designer.cs">
+      <DependentUpon>FrmDeclaredAnnexe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UiAnnexe\FrmImportAnnexe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UiAnnexe\FrmImportAnnexe.designer.cs">
+      <DependentUpon>FrmImportAnnexe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UiAnnexe\FrmLogAnnexe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UiAnnexe\FrmLogAnnexe.designer.cs">
+      <DependentUpon>FrmLogAnnexe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UiAnnexe\FrmRecapDecEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UiAnnexe\FrmRecapDecEmp.designer.cs">
+      <DependentUpon>FrmRecapDecEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UiAnnexe\IsDeclarationEmployeurView.cs" />
+    <Compile Include="UiAnnexe\RecapDeclarationEmployeurController.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\reportAnnexUn.resx">
+      <DependentUpon>reportAnnexUn.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\resources.resx" />
+    <EmbeddedResource Include="UiAnnexe\FrmAnnexe.resx">
+      <DependentUpon>FrmAnnexe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UiAnnexe\FrmDeclaredAnnexe.resx">
+      <DependentUpon>FrmDeclaredAnnexe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UiAnnexe\FrmImportAnnexe.resx">
+      <DependentUpon>FrmImportAnnexe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UiAnnexe\FrmLogAnnexe.resx">
+      <DependentUpon>FrmLogAnnexe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UiAnnexe\FrmRecapDecEmp.resx">
+      <DependentUpon>FrmRecapDecEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Reports\Datasets\DsCertificatRetenue.xsc">
+      <DependentUpon>DsCertificatRetenue.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Datasets\DsCertificatRetenue.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsCertificatRetenue1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\Datasets\DsCertificatRetenue.xss">
+      <DependentUpon>DsCertificatRetenue.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TVS.Config\TVS.Config.csproj">
+      <Project>{ba427a91-d4ba-4755-a225-ed6d7d08ef60}</Project>
+      <Name>TVS.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TVS.Core\TVS.Core.csproj">
+      <Project>{56fdccfb-4115-4b21-8e82-75a009c1db74}</Project>
+      <Name>TVS.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\financial_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\financial_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addchartpane_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addchartpane_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addgroupfooter_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addgroupfooter_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bocontact2_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bocontact2_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colorlegend_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colorlegend_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteheader_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteheader_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deletelist_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deletelist_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttotxt_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttotxt_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxls_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxls_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grid_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grid_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inbox_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tableofcontent_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ann.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendrier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Archiv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archiver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cnss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Supprimer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\valid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nouveau.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttotxt_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttotxt_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxlsx_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxlsx_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printquick_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printquick_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxlsx_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxlsx_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\additem_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttocsv_16x16.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

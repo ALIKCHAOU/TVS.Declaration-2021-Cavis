@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="17.1.4.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Attestation" SnapGridSize="25" ReportUnit="TenthsOfAMillimeter" Margins="90, 132, 2946, 0" PaperKind="A4" PageWidth="2100" PageHeight="2970" Version="17.1" DataMember="LigneCNSS" DataSource="#Ref-0" Dpi="254">
+  <Bands>
+    <Item1 Ref="2" ControlType="TopMarginBand" Name="topMarginBand1" HeightF="2946" Dpi="254">
+      <Controls>
+        <Item1 Ref="3" ControlType="XRLabel" Name="label23" Text="label23" TextAlignment="MiddleCenter" SizeF="201.0835,58.4199829" LocationFloat="1276.47888, 1080.42822" Dpi="254" Padding="5,5,0,0,254">
+          <DataBindings>
+            <Item1 Ref="4" FormatString="{0:dd/MM/yyyy}" PropertyName="Text" DataMember="LigneCNSS.DateFin" />
+          </DataBindings>
+          <StylePriority Ref="5" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="6" ControlType="XRLabel" Name="label22" Text="label22" TextAlignment="MiddleCenter" SizeF="254,58.42" LocationFloat="889.9755, 1080.42822" Dpi="254" Padding="5,5,0,0,254">
+          <DataBindings>
+            <Item1 Ref="7" FormatString="{0:dd/MM/yyyy}" PropertyName="Text" DataMember="LigneCNSS.DateDeb" />
+          </DataBindings>
+          <StylePriority Ref="8" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="9" ControlType="XRLabel" Name="label21" Text="label21" TextAlignment="MiddleCenter" SizeF="254,58.42" LocationFloat="272.30896, 1080.42822" Dpi="254" Font="Times New Roman, 9.75pt" Padding="5,5,0,0,254">
+          <DataBindings>
+            <Item1 Ref="10" PropertyName="Text" DataMember="LigneCNSS.NumCNSS" />
+          </DataBindings>
+          <StylePriority Ref="11" UseFont="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="12" ControlType="XRLabel" Name="label20" Text="label20" TextAlignment="MiddleCenter" SizeF="254,58.42" LocationFloat="748.55896, 1022.00836" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold, Italic" Padding="5,5,0,0,254">
+          <DataBindings>
+            <Item1 Ref="13" PropertyName="Text" DataMember="LigneCNSS.Nom" />
+          </DataBindings>
+          <StylePriority Ref="14" UseFont="false" UseTextAlignment="false" />
+        </Item4>
+        <Item5 Ref="15" ControlType="XRLabel" Name="label19" Text="label19" TextAlignment="MiddleCenter" SizeF="254,58.42" LocationFloat="494.55896, 1022.00836" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold, Italic" Padding="5,5,0,0,254">
+          <DataBindings>
+            <Item1 Ref="16" PropertyName="Text" DataMember="LigneCNSS.Prenom" />
+          </DataBindings>
+          <StylePriority Ref="17" UseFont="false" UseTextAlignment="false" />
+        </Item5>
+        <Item6 Ref="18" ControlType="XRLabel" Name="label18" Text="label18" TextAlignment="MiddleCenter" SizeF="254,58.42" LocationFloat="902.0173, 963.5883" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold, Italic" Padding="5,5,0,0,254">
+          <DataBindings>
+            <Item1 Ref="19" PropertyName="Text" DataMember="LigneCNSS.NumCNSS" />
+          </DataBindings>
+          <StylePriority Ref="20" UseFont="false" UseTextAlignment="false" />
+        </Item6>
+        <Item7 Ref="21" ControlType="XRLabel" Name="label17" Text="label17" TextAlignment="MiddleLeft" SizeF="935.1493,58.4199829" LocationFloat="313.184052, 857.7548" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold, Italic" Padding="5,5,0,0,254">
+          <DataBindings>
+            <Item1 Ref="22" PropertyName="Text" DataMember="Societe.RaisonSocial" />
+          </DataBindings>
+          <StylePriority Ref="23" UseFont="false" UseTextAlignment="false" />
+        </Item7>
+        <Item8 Ref="24" ControlType="XRLabel" Name="label16" Text="Signature et Cachet de l'employeur" TextAlignment="MiddleLeft" SizeF="521.017151,58.41992" LocationFloat="997.220459, 1442.6958" Dpi="254" Font="Times New Roman, 9pt, style=Bold" Padding="13,5,0,0,254">
+          <StylePriority Ref="25" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item8>
+        <Item9 Ref="26" ControlType="XRLabel" Name="label14" Text="Le :" TextAlignment="MiddleLeft" SizeF="92.39221,58.41986" LocationFloat="1108.11682, 1384.27576" Dpi="254" Font="Times New Roman, 9pt" Padding="13,5,0,0,254">
+          <StylePriority Ref="27" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item9>
+        <Item10 Ref="28" ControlType="XRTable" Name="table2" SizeF="1753.6875,60.854126" LocationFloat="34.3958321, 1307.54626" Dpi="254" Borders="All">
+          <Rows>
+            <Item1 Ref="29" ControlType="XRTableRow" Name="tableRow2" Weight="0.55102049463377023" Dpi="254">
+              <Cells>
+                <Item1 Ref="30" ControlType="XRTableCell" Name="tableCell11" Weight="0.37553015033612208" Text="tableCell11" Dpi="254">
+                  <DataBindings>
+                    <Item1 Ref="31" PropertyName="Text" DataMember="LigneCNSS.Prenom" />
+                  </DataBindings>
+                </Item1>
+                <Item2 Ref="32" ControlType="XRTableCell" Name="tableCell4" Weight="0.37553015033612208" Text="tableCell1" Dpi="254">
+                  <DataBindings>
+                    <Item1 Ref="33" PropertyName="Text" DataMember="LigneCNSS.Nom" />
+                  </DataBindings>
+                </Item2>
+                <Item3 Ref="34" ControlType="XRTableCell" Name="tableCell12" Weight="0.375530150336122" Text="tableCell12" Dpi="254">
+                  <DataBindings>
+                    <Item1 Ref="35" PropertyName="Text" DataMember="LigneCNSS.Exercice" />
+                  </DataBindings>
+                </Item3>
+                <Item4 Ref="36" ControlType="XRTableCell" Name="tableCell5" Weight="0.375530150336122" Text="tableCell2" Dpi="254">
+                  <Controls>
+                    <Item1 Ref="37" ControlType="XRLabel" Name="label13" Text="label13" SizeF="201.121445,58.4200439" LocationFloat="0, 0" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+                      <DataBindings>
+                        <Item1 Ref="38" PropertyName="Text" DataMember="LigneCNSS.Trimestre" />
+                      </DataBindings>
+                      <StylePriority Ref="39" UseBorders="false" />
+                    </Item1>
+                  </Controls>
+                  <DataBindings>
+                    <Item1 Ref="40" PropertyName="Text" DataMember="LigneCNSS.Annee" />
+                  </DataBindings>
+                </Item4>
+                <Item5 Ref="41" ControlType="XRTableCell" Name="tableCell6" Weight="0.57453929387629643" Text="tableCell3" Dpi="254">
+                  <DataBindings>
+                    <Item1 Ref="42" PropertyName="Text" DataMember="LigneCNSS.Montant" />
+                  </DataBindings>
+                </Item5>
+                <Item6 Ref="43" ControlType="XRTableCell" Name="tableCell10" Weight="0.25770704419704921" Text="tableCell10" Dpi="254">
+                  <DataBindings>
+                    <Item1 Ref="44" PropertyName="Text" DataMember="LigneCNSS.Page" />
+                  </DataBindings>
+                </Item6>
+                <Item7 Ref="45" ControlType="XRTableCell" Name="tableCell9" Weight="0.66563333415872616" Text="tableCell9" Dpi="254">
+                  <DataBindings>
+                    <Item1 Ref="46" PropertyName="Text" DataMember="LigneCNSS.Ligne" />
+                  </DataBindings>
+                </Item7>
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority Ref="47" UseBorders="false" />
+        </Item10>
+        <Item11 Ref="48" ControlType="XRTable" Name="table1" SizeF="1753.6875,55.56244" LocationFloat="34.3958321, 1251.98425" Dpi="254" Borders="All">
+          <Rows>
+            <Item1 Ref="49" ControlType="XRTableRow" Name="tableRow1" Weight="0.55102049463377023" Dpi="254">
+              <Cells>
+                <Item1 Ref="50" ControlType="XRTableCell" Name="tableCell1" Weight="0.75106030067224416" Text="Prénom                      Nom" Dpi="254" />
+                <Item2 Ref="51" ControlType="XRTableCell" Name="tableCell8" Weight="0.75106030067224416" Text="Année                  Trimestre" Dpi="254" />
+                <Item3 Ref="52" ControlType="XRTableCell" Name="tableCell7" Weight="0.57453925219038338" Text="Montant" Dpi="254" />
+                <Item4 Ref="53" ControlType="XRTableCell" Name="tableCell2" Weight="0.25770701087311582" Text="Page" Dpi="254" />
+                <Item5 Ref="54" ControlType="XRTableCell" Name="tableCell3" Weight="0.665632956804336" Text="Ligne" Dpi="254" Borders="All">
+                  <StylePriority Ref="55" UseBorders="false" />
+                </Item5>
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority Ref="56" UseBorders="false" />
+        </Item11>
+        <Item12 Ref="57" ControlType="XRLabel" Name="label12" Text="Je certifie avoir mentionné l'intéressé sur mes déclarations dans les conditions ci-après  décrites :" TextAlignment="MiddleLeft" SizeF="1761.625,58.41986" LocationFloat="34.3958321, 1138.84814" Dpi="254" Font="Times New Roman, 9pt" Padding="13,5,0,0,254">
+          <StylePriority Ref="58" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item12>
+        <Item13 Ref="59" ControlType="XRLabel" Name="label11" Text="......au" TextAlignment="MiddleLeft" SizeF="124.64209,58.41986" LocationFloat="1151.837, 1080.42822" Dpi="254" Font="Times New Roman, 9pt" Padding="13,5,0,0,254">
+          <StylePriority Ref="60" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item13>
+        <Item14 Ref="61" ControlType="XRLabel" Name="label10" Text="pour la période  du" TextAlignment="MiddleLeft" SizeF="280.2465,58.41986" LocationFloat="609.729065, 1080.42822" Dpi="254" Font="Times New Roman, 9pt" Padding="13,5,0,0,254">
+          <StylePriority Ref="62" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item14>
+        <Item15 Ref="63" ControlType="XRLabel" Name="label9" Text="assuré social N" TextAlignment="MiddleLeft" SizeF="237.913132,58.41992" LocationFloat="34.3958321, 1080.42822" Dpi="254" Font="Times New Roman, 9pt" Padding="13,5,0,0,254">
+          <StylePriority Ref="64" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item15>
+        <Item16 Ref="65" ControlType="XRLabel" Name="label8" Text="ou avoir employé Mlle/Mme/Mr " TextAlignment="MiddleLeft" SizeF="460.163116,58.4199829" LocationFloat="34.3958321, 1022.00836" Dpi="254" Font="Times New Roman, 9pt" Padding="13,5,0,0,254">
+          <StylePriority Ref="66" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item16>
+        <Item17 Ref="67" ControlType="XRLabel" Name="label7" Text="déclare employer" TextAlignment="MiddleLeft" SizeF="622.9458,58.4199829" LocationFloat="1161.03345, 963.5883" Dpi="254" Font="Times New Roman, 9pt" Padding="13,5,0,0,254">
+          <StylePriority Ref="68" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item17>
+        <Item18 Ref="69" ControlType="XRLabel" Name="label6" Text="employeur affilié à la Caisse Nationale de Sécurité Sociale sous le " TextAlignment="MiddleLeft" SizeF="867.62146,58.4199829" LocationFloat="34.3958321, 963.5883" Dpi="254" Font="Times New Roman, 9pt" Padding="13,5,0,0,254">
+          <StylePriority Ref="70" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item18>
+        <Item19 Ref="71" ControlType="XRLabel" Name="label15" Text="Je soussigné" TextAlignment="MiddleLeft" SizeF="253.7882,58.4199829" LocationFloat="59.3958435, 857.7548" Dpi="254" Font="Times New Roman, 9pt" Padding="13,5,0,0,254">
+          <StylePriority Ref="72" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item19>
+        <Item20 Ref="73" ControlType="XRLabel" Name="label5" Multiline="true" Text="ATTESTATION DE SALAIRES" TextAlignment="TopCenter" SizeF="1802.77087,82.22397" LocationFloat="59.3958435, 701.7679" Dpi="254" Font="Times New Roman, 14pt, style=Bold, Underline" Padding="5,5,0,0,254">
+          <StylePriority Ref="74" UseFont="false" UseTextAlignment="false" />
+        </Item20>
+        <Item21 Ref="75" ControlType="XRLabel" Name="label4" Multiline="true" Text="Pour éviter un retard quelconque dans le mandatement de vos employés , n'oublier pas chaque fois de porter leur numéro d'immatriculation et leur identité exacte sur les déclarations de salaires et de conformément au 2ème paragraphe de l'article 97 de la loi 60-30 du 14/12/60 telque modifié par l'article 20 de loi 70-34 du 09/07/70 ,(sera passible d'une amende de 3 à 15 dinars tout employeur qui a omis de porter sur les délarations de salaires le N° d'immatriculation des salariés à son service) . " TextAlignment="TopLeft" SizeF="754.0499,301.9144" LocationFloat="1108.11682, 320.767883" Dpi="254" Font="Calibri, 8pt" Padding="5,5,0,0,254">
+          <StylePriority Ref="76" UseFont="false" UseTextAlignment="false" />
+        </Item21>
+        <Item22 Ref="77" ControlType="XRLabel" Name="label3" Multiline="true" Text="TRES IMPORTANT :" TextAlignment="TopCenter" SizeF="754.0499,34.5990257" LocationFloat="1108.11682, 263.630066" Dpi="254" Font="Calibri, 9pt, style=Bold" Padding="5,5,0,0,254">
+          <StylePriority Ref="78" UseFont="false" UseTextAlignment="false" />
+        </Item22>
+        <Item23 Ref="79" ControlType="XRLabel" Name="label2" Multiline="true" Text="CAISSE NATIONALE DE SECURITE SOCIALE&#xD;&#xA;49,Avenu Taib M'Hiri - 1060 TUNIS BELVEDERE" TextAlignment="TopCenter" SizeF="563.5498,95.45323" LocationFloat="59.3958435, 374.958221" Dpi="254" Font="Calibri, 8pt" Padding="5,5,0,0,254">
+          <StylePriority Ref="80" UseFont="false" UseTextAlignment="false" />
+        </Item23>
+        <Item24 Ref="81" ControlType="XRLabel" Name="label1" Multiline="true" Text="REPUBLIQUE TUNISIENNE&#xD;&#xA;MINISTERE  DES AFFAIRES SOCIALES " TextAlignment="TopCenter" SizeF="563.5498,111.3282" LocationFloat="59.3958435, 263.630066" Dpi="254" Font="Calibri, 9pt, style=Bold" Padding="5,5,0,0,254">
+          <StylePriority Ref="82" UseFont="false" UseTextAlignment="false" />
+        </Item24>
+      </Controls>
+    </Item1>
+    <Item2 Ref="83" ControlType="DetailBand" Name="detailBand1" HeightF="254" Dpi="254" />
+    <Item3 Ref="84" ControlType="BottomMarginBand" Name="bottomMarginBand1" HeightF="0" Dpi="254" />
+  </Bands>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v17.1" Ref="0" Content="~Xtra#NULL" Type="TVS.Module.Cnss.Report.Datasets.DsAttestation" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

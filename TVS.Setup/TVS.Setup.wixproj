@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>3.10</ProductVersion>
+    <ProjectGuid>55648c30-fdcd-478e-b734-1318de9b2a0b</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputName>TVS.Declaration</OutputName>
+    <OutputType>Package</OutputType>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>Debug</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="DataBaseServerDlg.wxs" />
+    <Compile Include="GenericErrorDlg.wxs" />
+    <Compile Include="Product.wxs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Files" />
+    <Folder Include="Files\fr" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ControlPanel.wxi" />
+    <Content Include="Files\Program.ico" />
+    <Content Include="Files\Uninstall.ico" />
+    <Content Include="Files\banner.bmp" />
+    <Content Include="Files\dialog.bmp" />
+    <Content Include="Files\exclamation.ico" />
+    <Content Include="Files\File.ico" />
+    <Content Include="Files\fr\DevExpress.Data.v15.1.resources.dll" />
+    <Content Include="Files\fr\DevExpress.Printing.v15.1.Core.resources.dll" />
+    <Content Include="Files\fr\DevExpress.Utils.v15.1.resources.dll" />
+    <Content Include="Files\fr\DevExpress.XtraBars.v15.1.resources.dll" />
+    <Content Include="Files\fr\DevExpress.XtraEditors.v15.1.resources.dll" />
+    <Content Include="Files\fr\DevExpress.XtraGrid.v15.1.resources.dll" />
+    <Content Include="Files\fr\DevExpress.XtraLayout.v15.1.resources.dll" />
+    <Content Include="Files\fr\DevExpress.XtraPrinting.v15.1.resources.dll" />
+    <Content Include="Files\fr\DevExpress.XtraReports.v15.1.resources.dll" />
+    <Content Include="Files\information.ico" />
+    <Content Include="Files\License.rtf" />
+    <Content Include="Files\new.ico" />
+    <Content Include="Files\up.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WixExtension Include="WixUtilExtension">
+      <HintPath>$(WixExtDir)\WixUtilExtension.dll</HintPath>
+      <Name>WixUtilExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixUIExtension">
+      <HintPath>$(WixExtDir)\WixUIExtension.dll</HintPath>
+      <Name>WixUIExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixNetFxExtension">
+      <HintPath>$(WixExtDir)\WixNetFxExtension.dll</HintPath>
+      <Name>WixNetFxExtension</Name>
+    </WixExtension>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UtilExtension_fr-FR.wxl" />
+  </ItemGroup>
+  <Import Project="$(WixTargetsPath)" />
+  <!--
+	To modify your build process, add your task inside one of the targets below and uncomment it.
+	Other similar extension points exist, see Wix.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>

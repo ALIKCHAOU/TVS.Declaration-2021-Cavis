@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{27123C05-6418-43CA-9CC6-115EF212617F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TVS.Ef.Migration.Declaration</RootNamespace>
+    <AssemblyName>TVS.Ef.Migration.Declaration</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configurations\CategorieCnssConfig.cs" />
+    <Compile Include="Configurations\Dec2016\T2016Annexe7Config.cs" />
+    <Compile Include="Configurations\Dec2016\T2016Annexe6Config.cs" />
+    <Compile Include="Configurations\Dec2016\T2016Annexe5Config.cs" />
+    <Compile Include="Configurations\Dec2016\T2016Annexe4Config.cs" />
+    <Compile Include="Configurations\Dec2016\T2016Annexe3Config.cs" />
+    <Compile Include="Configurations\Dec2016\T2016Annexe2Config.cs" />
+    <Compile Include="Configurations\Dec2016\T2016Annexe1Config.cs" />
+    <Compile Include="Configurations\DeclarationFcConfig.cs" />
+    <Compile Include="Configurations\DeclarationBcConfig.cs" />
+    <Compile Include="Configurations\DeclarationCnssConfig.cs" />
+    <Compile Include="Configurations\EmployeeConfig.cs" />
+    <Compile Include="Configurations\Liass\F6003Config.cs" />
+    <Compile Include="Configurations\Liass\F6002Config.cs" />
+    <Compile Include="Configurations\Liass\F6001Config.cs" />
+    <Compile Include="Configurations\Liass\F6004ModeleAutorsieConfig.cs" />
+    <Compile Include="Configurations\Liass\F6004Config.cs" />
+    <Compile Include="Configurations\Liass\F6005Config.cs" />
+    <Compile Include="Configurations\Liass\F6301Config.cs" />
+    <Compile Include="Configurations\Liass\F6303Config.cs" />
+    <Compile Include="Configurations\Liass\F6304Config.cs" />
+    <Compile Include="Configurations\LigneBcConfig.cs" />
+    <Compile Include="Configurations\LigneCnssConfig.cs" />
+    <Compile Include="Configurations\LigneFcConfig.cs" />
+    <Compile Include="Configurations\SocieteConfig.cs" />
+    <Compile Include="Configurations\VirementEnteteConfig.cs" />
+    <Compile Include="Configurations\VirementLigneConfig.cs" />
+    <Compile Include="CustomConnectionFactory.cs" />
+    <Compile Include="CustomDatabaseConfiguration.cs" />
+    <Compile Include="CustomDatabaseInitializer.cs" />
+    <Compile Include="DeclarationContext.cs" />
+    <Compile Include="DeclarationDbMigrationConfiguration.cs" />
+    <Compile Include="EfHelper.cs" />
+    <Compile Include="FormattedDbEntityValidationException.cs" />
+    <Compile Include="GroupContextFactory.cs" />
+    <Compile Include="IGroupContextManager.cs" />
+    <Compile Include="MigrationGroupConfiguration.cs" />
+    <Compile Include="Migrations\201703021549366_InitialDataBase.cs" />
+    <Compile Include="Migrations\201703021549366_InitialDataBase.Designer.cs">
+      <DependentUpon>201703021549366_InitialDataBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703081523395_AddTableDecEmp2016.cs" />
+    <Compile Include="Migrations\201703081523395_AddTableDecEmp2016.Designer.cs">
+      <DependentUpon>201703081523395_AddTableDecEmp2016.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703101646573_DeleteColumnAnnexe5.cs" />
+    <Compile Include="Migrations\201703101646573_DeleteColumnAnnexe5.Designer.cs">
+      <DependentUpon>201703101646573_DeleteColumnAnnexe5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703151024364_AddTablesDeclarationSuspension.cs" />
+    <Compile Include="Migrations\201703151024364_AddTablesDeclarationSuspension.Designer.cs">
+      <DependentUpon>201703151024364_AddTablesDeclarationSuspension.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703151154411_FixAnnexe4.cs" />
+    <Compile Include="Migrations\201703151154411_FixAnnexe4.Designer.cs">
+      <DependentUpon>201703151154411_FixAnnexe4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703211417012_AddConnctionSage.cs" />
+    <Compile Include="Migrations\201703211417012_AddConnctionSage.Designer.cs">
+      <DependentUpon>201703211417012_AddConnctionSage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703220811495_AddTypeVariable.cs" />
+    <Compile Include="Migrations\201703220811495_AddTypeVariable.Designer.cs">
+      <DependentUpon>201703220811495_AddTypeVariable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703221034329_addColumnCodeTva.cs" />
+    <Compile Include="Migrations\201703221034329_addColumnCodeTva.Designer.cs">
+      <DependentUpon>201703221034329_addColumnCodeTva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704070751288_addTableUser.cs" />
+    <Compile Include="Migrations\201704070751288_addTableUser.Designer.cs">
+      <DependentUpon>201704070751288_addTableUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704110853515_AddColumnAnnexe1.cs" />
+    <Compile Include="Migrations\201704110853515_AddColumnAnnexe1.Designer.cs">
+      <DependentUpon>201704110853515_AddColumnAnnexe1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704120927443_AddColumnNumAutorisation.cs" />
+    <Compile Include="Migrations\201704120927443_AddColumnNumAutorisation.Designer.cs">
+      <DependentUpon>201704120927443_AddColumnNumAutorisation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704181427369_addTableVirement.cs" />
+    <Compile Include="Migrations\201704181427369_addTableVirement.Designer.cs">
+      <DependentUpon>201704181427369_addTableVirement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705080751525_UpdateColumnNetAPaye.cs" />
+    <Compile Include="Migrations\201705080751525_UpdateColumnNetAPaye.Designer.cs">
+      <DependentUpon>201705080751525_UpdateColumnNetAPaye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710110808076_addSalaireNonImposable.cs" />
+    <Compile Include="Migrations\201710110808076_addSalaireNonImposable.Designer.cs">
+      <DependentUpon>201710110808076_addSalaireNonImposable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710110810183_UpdateSalaireNonImposable.cs" />
+    <Compile Include="Migrations\201710110810183_UpdateSalaireNonImposable.Designer.cs">
+      <DependentUpon>201710110810183_UpdateSalaireNonImposable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710170927361_AddCnssTypeMatricule.cs" />
+    <Compile Include="Migrations\201710170927361_AddCnssTypeMatricule.Designer.cs">
+      <DependentUpon>201710170927361_AddCnssTypeMatricule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803051449319_AddTableF6001.cs" />
+    <Compile Include="Migrations\201803051449319_AddTableF6001.Designer.cs">
+      <DependentUpon>201803051449319_AddTableF6001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803060855573_AddClumnsToTableF6001.cs" />
+    <Compile Include="Migrations\201803060855573_AddClumnsToTableF6001.Designer.cs">
+      <DependentUpon>201803060855573_AddClumnsToTableF6001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803080822585_AddF6002.cs" />
+    <Compile Include="Migrations\201803080822585_AddF6002.Designer.cs">
+      <DependentUpon>201803080822585_AddF6002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803081126121_AddF6003.cs" />
+    <Compile Include="Migrations\201803081126121_AddF6003.Designer.cs">
+      <DependentUpon>201803081126121_AddF6003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803081527400_AddF6004.cs" />
+    <Compile Include="Migrations\201803081527400_AddF6004.Designer.cs">
+      <DependentUpon>201803081527400_AddF6004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803091329426_AddF6005.cs" />
+    <Compile Include="Migrations\201803091329426_AddF6005.Designer.cs">
+      <DependentUpon>201803091329426_AddF6005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803101014204_UpdateF6005.cs" />
+    <Compile Include="Migrations\201803101014204_UpdateF6005.Designer.cs">
+      <DependentUpon>201803101014204_UpdateF6005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803121004078_AddF6004ModeleAutorsie.cs" />
+    <Compile Include="Migrations\201803121004078_AddF6004ModeleAutorsie.Designer.cs">
+      <DependentUpon>201803121004078_AddF6004ModeleAutorsie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805091443058_AddLiasseFieldToTUser.cs" />
+    <Compile Include="Migrations\201805091443058_AddLiasseFieldToTUser.Designer.cs">
+      <DependentUpon>201805091443058_AddLiasseFieldToTUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805101041031_addtableUserSociete.cs" />
+    <Compile Include="Migrations\201805101041031_addtableUserSociete.Designer.cs">
+      <DependentUpon>201805101041031_addtableUserSociete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805111329026_changertypeeA224.cs" />
+    <Compile Include="Migrations\201805111329026_changertypeeA224.Designer.cs">
+      <DependentUpon>201805111329026_changertypeeA224.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812061616295_F630X.cs" />
+    <Compile Include="Migrations\201812061616295_F630X.Designer.cs">
+      <DependentUpon>201812061616295_F630X.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903021114435_ajoutchampA12018contributionsocialesolidarite.cs" />
+    <Compile Include="Migrations\201903021114435_ajoutchampA12018contributionsocialesolidarite.Designer.cs">
+      <DependentUpon>201903021114435_ajoutchampA12018contributionsocialesolidarite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006241429382_ChefFamille.cs" />
+    <Compile Include="Migrations\202006241429382_ChefFamille.Designer.cs">
+      <DependentUpon>202006241429382_ChefFamille.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007281105460_test.cs" />
+    <Compile Include="Migrations\202007281105460_test.Designer.cs">
+      <DependentUpon>202007281105460_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007281319430_stringchefffamille.cs" />
+    <Compile Include="Migrations\202007281319430_stringchefffamille.Designer.cs">
+      <DependentUpon>202007281319430_stringchefffamille.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CategorieCnss.cs" />
+    <Compile Include="Models\Dec2016\T2016Annexe7.cs" />
+    <Compile Include="Models\Dec2016\T2016Annexe6.cs" />
+    <Compile Include="Models\Dec2016\T2016Annexe5.cs" />
+    <Compile Include="Models\Dec2016\T2016Annexe4.cs" />
+    <Compile Include="Models\Dec2016\T2016Annexe3.cs" />
+    <Compile Include="Models\Dec2016\T2016Annexe2.cs" />
+    <Compile Include="Models\Dec2016\T2016Annexe1.cs" />
+    <Compile Include="Models\DeclarationBcSuspenssion.cs" />
+    <Compile Include="Models\DeclarationCnss.cs" />
+    <Compile Include="Models\DeclarationFactureSuspenssion.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Exercice.cs" />
+    <Compile Include="Models\Liass\F6003.cs" />
+    <Compile Include="Models\Liass\F6002.cs" />
+    <Compile Include="Models\Liass\F6001.cs" />
+    <Compile Include="Models\Liass\F6004ModeleAutorsie.cs" />
+    <Compile Include="Models\Liass\F6004.cs" />
+    <Compile Include="Models\Liass\F6005.cs" />
+    <Compile Include="Models\Liass\F6007.cs" />
+    <Compile Include="Models\Liass\F6301.cs" />
+    <Compile Include="Models\Liass\F6303.cs" />
+    <Compile Include="Models\Liass\F6304.cs" />
+    <Compile Include="Models\LigneBc.cs" />
+    <Compile Include="Models\LigneCnss.cs" />
+    <Compile Include="Models\LigneFacture.cs" />
+    <Compile Include="Models\Societe.cs" />
+    <Compile Include="Models\SocieteBanque.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UtilisateurSociete.cs" />
+    <Compile Include="Models\VirementEntete.cs" />
+    <Compile Include="Models\VirementLigne.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="FilesImport2016\Annexe1.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="FilesImport2016\Annexe2.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="FilesImport2016\Annexe3.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="FilesImport2016\Annexe4.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="FilesImport2016\Annexe4_2019.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="FilesImport2016\Annexe5.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="FilesImport2016\Annexe6.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="FilesImport2016\Annexe7.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="FilesImport2018\Annexe1_2018.csv" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TVS.Config\TVS.Config.csproj">
+      <Project>{ba427a91-d4ba-4755-a225-ed6d7d08ef60}</Project>
+      <Name>TVS.Config</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201703021549366_InitialDataBase.resx">
+      <DependentUpon>201703021549366_InitialDataBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703081523395_AddTableDecEmp2016.resx">
+      <DependentUpon>201703081523395_AddTableDecEmp2016.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703101646573_DeleteColumnAnnexe5.resx">
+      <DependentUpon>201703101646573_DeleteColumnAnnexe5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703151024364_AddTablesDeclarationSuspension.resx">
+      <DependentUpon>201703151024364_AddTablesDeclarationSuspension.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703151154411_FixAnnexe4.resx">
+      <DependentUpon>201703151154411_FixAnnexe4.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703211417012_AddConnctionSage.resx">
+      <DependentUpon>201703211417012_AddConnctionSage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703220811495_AddTypeVariable.resx">
+      <DependentUpon>201703220811495_AddTypeVariable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703221034329_addColumnCodeTva.resx">
+      <DependentUpon>201703221034329_addColumnCodeTva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704070751288_addTableUser.resx">
+      <DependentUpon>201704070751288_addTableUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704110853515_AddColumnAnnexe1.resx">
+      <DependentUpon>201704110853515_AddColumnAnnexe1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704120927443_AddColumnNumAutorisation.resx">
+      <DependentUpon>201704120927443_AddColumnNumAutorisation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704181427369_addTableVirement.resx">
+      <DependentUpon>201704181427369_addTableVirement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705080751525_UpdateColumnNetAPaye.resx">
+      <DependentUpon>201705080751525_UpdateColumnNetAPaye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710110808076_addSalaireNonImposable.resx">
+      <DependentUpon>201710110808076_addSalaireNonImposable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710110810183_UpdateSalaireNonImposable.resx">
+      <DependentUpon>201710110810183_UpdateSalaireNonImposable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710170927361_AddCnssTypeMatricule.resx">
+      <DependentUpon>201710170927361_AddCnssTypeMatricule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803051449319_AddTableF6001.resx">
+      <DependentUpon>201803051449319_AddTableF6001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803060855573_AddClumnsToTableF6001.resx">
+      <DependentUpon>201803060855573_AddClumnsToTableF6001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803080822585_AddF6002.resx">
+      <DependentUpon>201803080822585_AddF6002.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803081126121_AddF6003.resx">
+      <DependentUpon>201803081126121_AddF6003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803081527400_AddF6004.resx">
+      <DependentUpon>201803081527400_AddF6004.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803091329426_AddF6005.resx">
+      <DependentUpon>201803091329426_AddF6005.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803101014204_UpdateF6005.resx">
+      <DependentUpon>201803101014204_UpdateF6005.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803121004078_AddF6004ModeleAutorsie.resx">
+      <DependentUpon>201803121004078_AddF6004ModeleAutorsie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805091443058_AddLiasseFieldToTUser.resx">
+      <DependentUpon>201805091443058_AddLiasseFieldToTUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805101041031_addtableUserSociete.resx">
+      <DependentUpon>201805101041031_addtableUserSociete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805111329026_changertypeeA224.resx">
+      <DependentUpon>201805111329026_changertypeeA224.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812061616295_F630X.resx">
+      <DependentUpon>201812061616295_F630X.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903021114435_ajoutchampA12018contributionsocialesolidarite.resx">
+      <DependentUpon>201903021114435_ajoutchampA12018contributionsocialesolidarite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006241429382_ChefFamille.resx">
+      <DependentUpon>202006241429382_ChefFamille.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007281105460_test.resx">
+      <DependentUpon>202007281105460_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007281319430_stringchefffamille.resx">
+      <DependentUpon>202007281319430_stringchefffamille.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

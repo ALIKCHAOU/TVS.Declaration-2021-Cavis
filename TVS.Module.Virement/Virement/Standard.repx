@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="17.1.4.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Virement" Margins="50, 42, 47, 100" PageWidth="850" PageHeight="1100" Version="17.1" DataMember="TEntete" DataSource="#Ref-0">
+  <Bands>
+    <Item1 Ref="2" ControlType="TopMarginBand" Name="topMarginBand1" HeightF="47" />
+    <Item2 Ref="3" ControlType="DetailBand" Name="detailBand1" HeightF="23">
+      <Controls>
+        <Item1 Ref="4" ControlType="XRLabel" Name="label8" TextAlignment="MiddleRight" SizeF="100,23" LocationFloat="657.999939, 0" Padding="2,2,0,0,100" Borders="Right, Bottom">
+          <DataBindings>
+            <Item1 Ref="5" FormatString="{0:0.000}" PropertyName="Text" DataMember="TLignes.Montant" />
+          </DataBindings>
+          <StylePriority Ref="6" UseBorders="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="7" ControlType="XRLabel" Name="label7" TextAlignment="MiddleLeft" SizeF="138.541672,23" LocationFloat="148.624924, 0" Padding="2,2,0,0,100" Borders="Right, Bottom">
+          <DataBindings>
+            <Item1 Ref="8" PropertyName="Text" DataMember="TLignes.Prenom" />
+          </DataBindings>
+          <StylePriority Ref="9" UseBorders="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="10" ControlType="XRLabel" Name="label6" TextAlignment="MiddleLeft" SizeF="148.624908,23" LocationFloat="0, 0" Padding="2,2,0,0,100" Borders="Left, Right, Bottom">
+          <DataBindings>
+            <Item1 Ref="11" PropertyName="Text" DataMember="TLignes.Nom" />
+          </DataBindings>
+          <StylePriority Ref="12" UseBorders="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="13" ControlType="XRLabel" Name="label5" TextAlignment="MiddleLeft" SizeF="257.2917,23" LocationFloat="400.708252, 0" Padding="2,2,0,0,100" Borders="Right, Bottom">
+          <DataBindings>
+            <Item1 Ref="14" PropertyName="Text" DataMember="TLignes.Rib" />
+          </DataBindings>
+          <StylePriority Ref="15" UseBorders="false" UseTextAlignment="false" />
+        </Item4>
+        <Item5 Ref="16" ControlType="XRLabel" Name="label4" TextAlignment="MiddleLeft" SizeF="113.541656,23" LocationFloat="287.1666, 0" Padding="2,2,0,0,100" Borders="Right, Bottom">
+          <DataBindings>
+            <Item1 Ref="17" PropertyName="Text" DataMember="TLignes.Banque" />
+          </DataBindings>
+          <StylePriority Ref="18" UseBorders="false" UseTextAlignment="false" />
+        </Item5>
+      </Controls>
+    </Item2>
+    <Item3 Ref="19" ControlType="BottomMarginBand" Name="bottomMarginBand1" HeightF="100" />
+    <Item4 Ref="20" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="146.916656">
+      <Controls>
+        <Item1 Ref="21" ControlType="XRPageInfo" Name="pageInfo1" PageInfo="DateTime" SizeF="160.416626,23" LocationFloat="559.0416, 0" Padding="2,2,0,0,100" />
+        <Item2 Ref="22" ControlType="XRLabel" Name="label18" Text="label18" SizeF="188.541611,23.0000038" LocationFloat="239.583328, 32.9999924" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="23" PropertyName="Text" DataMember="TEntete.Agence" />
+          </DataBindings>
+          <StylePriority Ref="24" UseFont="false" />
+        </Item2>
+        <Item3 Ref="25" ControlType="XRLabel" Name="label16" Text="label16" SizeF="737.9999,23" LocationFloat="10.000102, 100.916641" Padding="2,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="26" FormatString="Nous avons l'honneur de vous demander de bien vouloir procéder, par le débit de notre compte n° : {0}" PropertyName="Text" DataMember="TEntete.Rib" />
+          </DataBindings>
+        </Item3>
+        <Item4 Ref="27" ControlType="XRLabel" Name="label15" Text="label15" SizeF="737.9999,23" LocationFloat="10.000102, 123.916656" Padding="2,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="28" FormatString="aux virements suivants représentant : {0}" PropertyName="Text" DataMember="TEntete.MotifOperation" />
+          </DataBindings>
+        </Item4>
+        <Item5 Ref="29" ControlType="XRLabel" Name="label3" Text="Ordre de Virement" TextAlignment="TopLeft" SizeF="188.541672,23" LocationFloat="239.583328, 10.0000067" Font="Times New Roman, 14pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="30" UseFont="false" UseTextAlignment="false" />
+        </Item5>
+        <Item6 Ref="31" ControlType="XRLabel" Name="label1" Text="label1" TextAlignment="TopCenter" SizeF="181.25,23" LocationFloat="10.000102, 0" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="32" PropertyName="Text" DataMember="TSociete.RaisonSocial" />
+          </DataBindings>
+          <StylePriority Ref="33" UseFont="false" UseTextAlignment="false" />
+        </Item6>
+      </Controls>
+    </Item4>
+    <Item5 Ref="34" ControlType="PageHeaderBand" Name="PageHeader" HeightF="57.29168">
+      <Controls>
+        <Item1 Ref="35" ControlType="XRLabel" Name="label9" Text="Nom" TextAlignment="MiddleCenter" SizeF="148.624908,23" LocationFloat="0, 34.29168" Padding="2,2,0,0,100" Borders="All">
+          <StylePriority Ref="36" UseBorders="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="37" ControlType="XRLabel" Name="label10" Text="Prénom" TextAlignment="MiddleCenter" SizeF="138.541672,23" LocationFloat="148.624924, 34.29168" Padding="2,2,0,0,100" Borders="Top, Right, Bottom">
+          <StylePriority Ref="38" UseBorders="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="39" ControlType="XRLabel" Name="label11" Text="Banque" TextAlignment="MiddleCenter" SizeF="113.541656,23" LocationFloat="287.1666, 34.29168" Padding="2,2,0,0,100" Borders="Top, Right, Bottom">
+          <StylePriority Ref="40" UseBorders="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="41" ControlType="XRLabel" Name="label12" Text="RIB ou N° de compte" TextAlignment="MiddleCenter" SizeF="257.2917,23" LocationFloat="400.708252, 34.29168" Padding="2,2,0,0,100" Borders="Top, Right, Bottom">
+          <StylePriority Ref="42" UseBorders="false" UseTextAlignment="false" />
+        </Item4>
+        <Item5 Ref="43" ControlType="XRLabel" Name="label13" Text="Montant" TextAlignment="MiddleCenter" SizeF="100,23" LocationFloat="657.999939, 34.29168" Padding="2,2,0,0,100" Borders="Top, Right, Bottom">
+          <StylePriority Ref="44" UseBorders="false" UseTextAlignment="false" />
+        </Item5>
+      </Controls>
+    </Item5>
+    <Item6 Ref="45" ControlType="ReportFooterBand" Name="ReportFooter" HeightF="129.166672" TextAlignment="MiddleRight">
+      <Controls>
+        <Item1 Ref="46" ControlType="XRLabel" Name="label17" Text="Directeur Général" TextAlignment="MiddleLeft" SizeF="195.833344,23.0000038" LocationFloat="361.458344, 62.4583244" Font="Times New Roman, 11pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="47" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="48" ControlType="XRLabel" Name="label14" SizeF="328.125,23.0000038" LocationFloat="429.874939, 10.0000067" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100" Borders="All">
+          <Summary Ref="49" FormatString="Total : {0:0.000}" Running="Report" />
+          <DataBindings>
+            <Item1 Ref="50" PropertyName="Text" DataMember="TLignes.Montant" />
+          </DataBindings>
+          <StylePriority Ref="51" UseFont="false" UseBorders="false" />
+        </Item2>
+      </Controls>
+      <StylePriority Ref="52" UseTextAlignment="false" />
+    </Item6>
+    <Item7 Ref="53" ControlType="PageFooterBand" Name="PageFooter" HeightF="44.7916679">
+      <Controls>
+        <Item1 Ref="54" ControlType="XRLine" Name="line1" SizeF="746.875,2.08333349" LocationFloat="1.04166663, 3.125" />
+        <Item2 Ref="55" ControlType="XRPageInfo" Name="pageInfo2" Format="Page  {0}/{1}" SizeF="266.666656,23" LocationFloat="10.000102, 11.7916746" Padding="2,2,0,0,100" />
+      </Controls>
+    </Item7>
+  </Bands>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v17.1" Ref="0" Content="~Xtra#NULL" Type="TVS.Module.Virement.Reports.Datasets.DsVirement" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

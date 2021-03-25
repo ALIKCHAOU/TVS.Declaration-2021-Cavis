@@ -1,0 +1,307 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TVS.Ef.Migration.Declaration.Models.Liass
+{
+    [Table("F6001")]
+    public class TF6001
+    {
+        public int Id { get; set; }
+
+        [Required]
+        public int SocieteNo { get; set; }
+
+        public int ExerciceId { get; set; }
+        public TSociete Societe { get; set; }
+        public TExercice Exercice { get; set; }
+
+        public int ActeDeDepot { get; set;}
+
+        public string NatureDepot { get; set; }
+
+        public decimal F60010001 { get; set; }
+        public decimal F60010002 { get; set; }
+        public decimal F60010003 { get; set; }
+        public decimal F60010004 { get; set; }
+        public decimal F60010005 { get; set; }
+        public decimal F60010006 { get; set; }
+        public decimal F60010007 { get; set; }
+        public decimal F60010008 { get; set; }
+        public decimal F60010009 { get; set; }
+        public decimal F60010010 { get; set; }
+        public decimal F60010011 { get; set; }
+        public decimal F60010012 { get; set; }
+        public decimal F60010013 { get; set; }
+        public decimal F60010014 { get; set; }
+        public decimal F60010015 { get; set; }
+        public decimal F60010016 { get; set; }
+        public decimal F60010017 { get; set; }
+        public decimal F60010018 { get; set; }
+        public decimal F60010019 { get; set; }
+        public decimal F60010020 { get; set; }
+        public decimal F60010021 { get; set; }
+        public decimal F60010022 { get; set; }
+        public decimal F60010023 { get; set; }
+        public decimal F60010024 { get; set; }
+        public decimal F60010025 { get; set; }
+        public decimal F60010026 { get; set; }
+        public decimal F60010027 { get; set; }
+        public decimal F60010028 { get; set; }
+        public decimal F60010029 { get; set; }
+        public decimal F60010030 { get; set; }
+        public decimal F60010031 { get; set; }
+        public decimal F60010032 { get; set; }
+        public decimal F60010033 { get; set; }
+        public decimal F60010034 { get; set; }
+        public decimal F60010035 { get; set; }
+        public decimal F60010036 { get; set; }
+        public decimal F60010037 { get; set; }
+        public decimal F60010038 { get; set; }
+        public decimal F60010039 { get; set; }
+        public decimal F60010040 { get; set; }
+        public decimal F60010041 { get; set; }
+        public decimal F60010042 { get; set; }
+        public decimal F60010043 { get; set; }
+        public decimal F60010044 { get; set; }
+        public decimal F60010045 { get; set; }
+        public decimal F60010046 { get; set; }
+        public decimal F60010047 { get; set; }
+        public decimal F60010048 { get; set; }
+        public decimal F60010049 { get; set; }
+        public decimal F60010050 { get; set; }
+        public decimal F60010051 { get; set; }
+        public decimal F60010052 { get; set; }
+        public decimal F60010053 { get; set; }
+        public decimal F60010054 { get; set; }
+        public decimal F60010055 { get; set; }
+        public decimal F60010056 { get; set; }
+        public decimal F60010057 { get; set; }
+        public decimal F60010058 { get; set; }
+        public decimal F60010059 { get; set; }
+        public decimal F60010060 { get; set; }
+        public decimal F60010061 { get; set; }
+        public decimal F60010062 { get; set; }
+        public decimal F60010063 { get; set; }
+        public decimal F60010064 { get; set; }
+        public decimal F60010065 { get; set; }
+
+        public decimal F60010066 { get; set; }
+        public decimal F60010067 { get; set; }
+        public decimal F60010068 { get; set; }
+
+        public decimal F60011001 { get; set; }
+        public decimal F60011002 { get; set; }
+        public decimal F60011003 { get; set; }
+        public decimal F60011004 { get; set; }
+        public decimal F60011005 { get; set; }
+        public decimal F60011006 { get; set; }
+        public decimal F60011007 { get; set; }
+        public decimal F60011008 { get; set; }
+        public decimal F60011009 { get; set; }
+        public decimal F60011010 { get; set; }
+        public decimal F60011011 { get; set; }
+        public decimal F60011012 { get; set; }
+        public decimal F60011013 { get; set; }
+        public decimal F60011014 { get; set; }
+        public decimal F60011015 { get; set; }
+        public decimal F60011016 { get; set; }
+        public decimal F60011017 { get; set; }
+        public decimal F60011018 { get; set; }
+        public decimal F60011019 { get; set; }
+        public decimal F60011020 { get; set; }
+        public decimal F60011021 { get; set; }
+        public decimal F60011022 { get; set; }
+        public decimal F60011023 { get; set; }
+        public decimal F60011024 { get; set; }
+        public decimal F60011025 { get; set; }
+        public decimal F60011026 { get; set; }
+        public decimal F60011027 { get; set; }
+        public decimal F60011028 { get; set; }
+        public decimal F60011029 { get; set; }
+        public decimal F60011030 { get; set; }
+        public decimal F60011031 { get; set; }
+        public decimal F60011032 { get; set; }
+        public decimal F60011033 { get; set; }
+        public decimal F60011034 { get; set; }
+        public decimal F60011035 { get; set; }
+        public decimal F60011036 { get; set; }
+        public decimal F60011037 { get; set; }
+        public decimal F60011038 { get; set; }
+        public decimal F60011039 { get; set; }
+        public decimal F60011040 { get; set; }
+        public decimal F60011041 { get; set; }
+        public decimal F60011042 { get; set; }
+        public decimal F60011043 { get; set; }
+        public decimal F60011044 { get; set; }
+        public decimal F60011045 { get; set; }
+        public decimal F60011046 { get; set; }
+        public decimal F60011047 { get; set; }
+        public decimal F60011048 { get; set; }
+        public decimal F60011049 { get; set; }
+        public decimal F60011050 { get; set; }
+        public decimal F60011051 { get; set; }
+        public decimal F60011052 { get; set; }
+        public decimal F60011053 { get; set; }
+        public decimal F60011054 { get; set; }
+        public decimal F60011055 { get; set; }
+        public decimal F60011056 { get; set; }
+        public decimal F60011057 { get; set; }
+        public decimal F60011058 { get; set; }
+        public decimal F60011059 { get; set; }
+        public decimal F60011060 { get; set; }
+        public decimal F60011061 { get; set; }
+        public decimal F60011062 { get; set; }
+        public decimal F60011063 { get; set; }
+        public decimal F60011064 { get; set; }
+        public decimal F60011065 { get; set; }
+
+        public decimal F60011066 { get; set; }
+        public decimal F60011067 { get; set; }
+        public decimal F60011068 { get; set; }
+
+        public decimal F60012001 { get; set; }
+        public decimal F60012002 { get; set; }
+        public decimal F60012003 { get; set; }
+        public decimal F60012004 { get; set; }
+        public decimal F60012005 { get; set; }
+        public decimal F60012006 { get; set; }
+        public decimal F60012007 { get; set; }
+        public decimal F60012008 { get; set; }
+        public decimal F60012009 { get; set; }
+        public decimal F60012010 { get; set; }
+        public decimal F60012011 { get; set; }
+        public decimal F60012012 { get; set; }
+        public decimal F60012013 { get; set; }
+        public decimal F60012014 { get; set; }
+        public decimal F60012015 { get; set; }
+        public decimal F60012016 { get; set; }
+        public decimal F60012017 { get; set; }
+        public decimal F60012018 { get; set; }
+        public decimal F60012019 { get; set; }
+        public decimal F60012020 { get; set; }
+        public decimal F60012021 { get; set; }
+        public decimal F60012022 { get; set; }
+        public decimal F60012023 { get; set; }
+        public decimal F60012024 { get; set; }
+        public decimal F60012025 { get; set; }
+        public decimal F60012026 { get; set; }
+        public decimal F60012027 { get; set; }
+        public decimal F60012028 { get; set; }
+        public decimal F60012029 { get; set; }
+        public decimal F60012030 { get; set; }
+        public decimal F60012031 { get; set; }
+        public decimal F60012032 { get; set; }
+        public decimal F60012033 { get; set; }
+        public decimal F60012034 { get; set; }
+        public decimal F60012035 { get; set; }
+        public decimal F60012036 { get; set; }
+        public decimal F60012037 { get; set; }
+        public decimal F60012038 { get; set; }
+        public decimal F60012039 { get; set; }
+        public decimal F60012040 { get; set; }
+        public decimal F60012041 { get; set; }
+        public decimal F60012042 { get; set; }
+        public decimal F60012043 { get; set; }
+        public decimal F60012044 { get; set; }
+        public decimal F60012045 { get; set; }
+        public decimal F60012046 { get; set; }
+        public decimal F60012047 { get; set; }
+        public decimal F60012048 { get; set; }
+        public decimal F60012049 { get; set; }
+        public decimal F60012050 { get; set; }
+        public decimal F60012051 { get; set; }
+        public decimal F60012052 { get; set; }
+        public decimal F60012053 { get; set; }
+        public decimal F60012054 { get; set; }
+        public decimal F60012055 { get; set; }
+        public decimal F60012056 { get; set; }
+        public decimal F60012057 { get; set; }
+        public decimal F60012058 { get; set; }
+        public decimal F60012059 { get; set; }
+        public decimal F60012060 { get; set; }
+        public decimal F60012061 { get; set; }
+        public decimal F60012062 { get; set; }
+        public decimal F60012063 { get; set; }
+        public decimal F60012064 { get; set; }
+        public decimal F60012065 { get; set; }
+
+        public decimal F60012066 { get; set; }
+        public decimal F60012067 { get; set; }
+        public decimal F60012068 { get; set; }
+
+        public decimal F60013001 { get; set; }
+        public decimal F60013002 { get; set; }
+        public decimal F60013003 { get; set; }
+        public decimal F60013004 { get; set; }
+        public decimal F60013005 { get; set; }
+        public decimal F60013006 { get; set; }
+        public decimal F60013007 { get; set; }
+        public decimal F60013008 { get; set; }
+        public decimal F60013009 { get; set; }
+        public decimal F60013010 { get; set; }
+        public decimal F60013011 { get; set; }
+        public decimal F60013012 { get; set; }
+        public decimal F60013013 { get; set; }
+        public decimal F60013014 { get; set; }
+        public decimal F60013015 { get; set; }
+        public decimal F60013016 { get; set; }
+        public decimal F60013017 { get; set; }
+        public decimal F60013018 { get; set; }
+        public decimal F60013019 { get; set; }
+        public decimal F60013020 { get; set; }
+        public decimal F60013021 { get; set; }
+        public decimal F60013022 { get; set; }
+        public decimal F60013023 { get; set; }
+        public decimal F60013024 { get; set; }
+        public decimal F60013025 { get; set; }
+        public decimal F60013026 { get; set; }
+        public decimal F60013027 { get; set; }
+        public decimal F60013028 { get; set; }
+        public decimal F60013029 { get; set; }
+        public decimal F60013030 { get; set; }
+        public decimal F60013031 { get; set; }
+        public decimal F60013032 { get; set; }
+        public decimal F60013033 { get; set; }
+        public decimal F60013034 { get; set; }
+        public decimal F60013035 { get; set; }
+        public decimal F60013036 { get; set; }
+        public decimal F60013037 { get; set; }
+        public decimal F60013038 { get; set; }
+        public decimal F60013039 { get; set; }
+        public decimal F60013040 { get; set; }
+        public decimal F60013041 { get; set; }
+        public decimal F60013042 { get; set; }
+        public decimal F60013043 { get; set; }
+        public decimal F60013044 { get; set; }
+        public decimal F60013045 { get; set; }
+        public decimal F60013046 { get; set; }
+        public decimal F60013047 { get; set; }
+        public decimal F60013048 { get; set; }
+        public decimal F60013049 { get; set; }
+        public decimal F60013050 { get; set; }
+        public decimal F60013051 { get; set; }
+        public decimal F60013052 { get; set; }
+        public decimal F60013053 { get; set; }
+        public decimal F60013054 { get; set; }
+        public decimal F60013055 { get; set; }
+        public decimal F60013056 { get; set; }
+        public decimal F60013057 { get; set; }
+        public decimal F60013058 { get; set; }
+        public decimal F60013059 { get; set; }
+        public decimal F60013060 { get; set; }
+        public decimal F60013061 { get; set; }
+        public decimal F60013062 { get; set; }
+        public decimal F60013063 { get; set; }
+        public decimal F60013064 { get; set; }
+        public decimal F60013065 { get; set; }
+
+        public decimal F60013066 { get; set; }
+        public decimal F60013067 { get; set; }
+        public decimal F60013068 { get; set; }
+    }
+}

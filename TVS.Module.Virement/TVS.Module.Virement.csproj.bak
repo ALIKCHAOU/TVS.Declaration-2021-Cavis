@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B10015D-60D4-4055-B2BB-5A4A0B5B4B05}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TVS.Module.Virement</RootNamespace>
+    <AssemblyName>TVS.Module.Virement</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CsvHelper, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.2.16.3.0\lib\net45\CsvHelper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2.UI, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.2.Extensions, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commandes\CommandeBanque.cs" />
+    <Compile Include="Commandes\CommandeVirementList.cs" />
+    <Compile Include="Commandes\ExportCommandAttribute.cs" />
+    <Compile Include="Commandes\ExportParamVirementAttribute.cs" />
+    <Compile Include="ImportsSql\Controller\LigneImportSqlController.cs" />
+    <Compile Include="PrintRibbonControllerResources.Designer.cs" />
+    <Compile Include="Reports\CertificatRetenueReport.cs" />
+    <Compile Include="Reports\Commande\NewCommandHandler.cs" />
+    <Compile Include="Reports\Commande\OpenCommandHandler.cs" />
+    <Compile Include="Reports\Commande\SaveCommandHandler.cs" />
+    <Compile Include="Reports\Datasets\DsVirement.cs">
+      <DependentUpon>DsVirement.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Datasets\DsVirement.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsVirement.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DesignExtension.cs" />
+    <Compile Include="Reports\FrmReportDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmReportDesigner.designer.cs">
+      <DependentUpon>FrmReportDesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UiVirement\Views\LigneSqlView.cs" />
+    <Compile Include="Imports\Controller\ImportController.cs" />
+    <Compile Include="Imports\FrmImportDeclaration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imports\FrmImportDeclaration.designer.cs">
+      <DependentUpon>FrmImportDeclaration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\Repository\ILigneImportRepository.cs" />
+    <Compile Include="Imports\Repository\LigneImportRepository.cs" />
+    <Compile Include="Imports\UcImportDeclaration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Imports\UcImportDeclaration.designer.cs">
+      <DependentUpon>UcImportDeclaration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\UcLignesImport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Imports\UcLignesImport.designer.cs">
+      <DependentUpon>UcLignesImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\Views\DeclarationImportView.cs" />
+    <Compile Include="Imports\Views\LigneImportMap.cs" />
+    <Compile Include="Imports\Views\LigneImportView.cs" />
+    <Compile Include="InitModule.cs" />
+    <Compile Include="ModuleVirement.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UcConfig\Controller\BanqueConrtoller.cs" />
+    <Compile Include="UcConfig\UcBanque.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcConfig\UcBanque.designer.cs">
+      <DependentUpon>UcBanque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UiVirement\Controller\DeclarationController.cs" />
+    <Compile Include="UiVirement\FrmDeclaration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UiVirement\FrmDeclaration.designer.cs">
+      <DependentUpon>FrmDeclaration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UiVirement\FrmListDeclaration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UiVirement\FrmListDeclaration.designer.cs">
+      <DependentUpon>FrmListDeclaration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UiVirement\FrmListDeclaration.Init.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UiVirement\Views\DeclarationView.cs" />
+    <Compile Include="UiVirement\Views\LigneView.cs" />
+    <Compile Include="XRDesignRibbonControllerResources.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Virement\Standard.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TVS.Config\TVS.Config.csproj">
+      <Project>{ba427a91-d4ba-4755-a225-ed6d7d08ef60}</Project>
+      <Name>TVS.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TVS.Core\TVS.Core.csproj">
+      <Project>{56fdccfb-4115-4b21-8e82-75a009c1db74}</Project>
+      <Name>TVS.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TVS.Dapper\TVS.Dapper.csproj">
+      <Project>{afecfd8e-e268-4c86-a6f1-9b0c8f697dff}</Project>
+      <Name>TVS.Dapper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Reports\Datasets\DsVirement.xsc">
+      <DependentUpon>DsVirement.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Datasets\DsVirement.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsVirement.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Datasets\DsVirement.xss">
+      <DependentUpon>DsVirement.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\addgroupfooter_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Imports\FrmImportDeclaration.resx">
+      <DependentUpon>FrmImportDeclaration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imports\UcImportDeclaration.resx">
+      <DependentUpon>UcImportDeclaration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imports\UcLignesImport.resx">
+      <DependentUpon>UcLignesImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintRibbonControllerResources.resx" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FrmReportDesigner.resx">
+      <DependentUpon>FrmReportDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcConfig\UcBanque.resx">
+      <DependentUpon>UcBanque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UiVirement\FrmDeclaration.resx">
+      <DependentUpon>FrmDeclaration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UiVirement\FrmListDeclaration.resx">
+      <DependentUpon>FrmListDeclaration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRDesignRibbonControllerResources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addgroupfooter_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Archiv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archiver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cnss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\freezetoprow_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nouveau.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recentlyuse_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recentlyuse_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Supprimer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\valid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ImportsSql\Views\" />
+    <Folder Include="Reports\Repx\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sage.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,643 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="bocontact2_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bocontact2_32x322.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="printquick_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printquick_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A512" xml:space="preserve">
+    <value>Total des montants égaux ou supérieurs à 1000D y compris la TVA provenant des ventes des entreprises bénéficiant de la déduction des deux tiers des revenus et des ventes des sociétés soumises à l'impôt sur les sociétés aux taux de 10%</value>
+  </data>
+  <data name="A4201" xml:space="preserve">
+    <value>Revenus des valeurs mobilières.</value>
+  </data>
+  <data name="save_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="print_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\print_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A423" xml:space="preserve">
+    <value>Type des montants servis au titre des honoraires, commissions,
+courtages, loyers et rémunérations des activités non commerciales provenant des opérations d’exportation.</value>
+  </data>
+  <data name="errBeneficiereNom" xml:space="preserve">
+    <value>Veuillez vérifier le nom du bénéficiaire!</value>
+  </data>
+  <data name="additem_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\additem_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A313" xml:space="preserve">
+    <value>Intérêts des autres capitaux mobiliers</value>
+  </data>
+  <data name="a5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A117" xml:space="preserve">
+    <value>Revenu imposable</value>
+  </data>
+  <data name="A315" xml:space="preserve">
+    <value>Montant des retenues opérées</value>
+  </data>
+  <data name="preview_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\preview_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A4203" xml:space="preserve">
+    <value>Actions et parts sociales.</value>
+  </data>
+  <data name="A612" xml:space="preserve">
+    <value>Montants des ristournes commerciales et non commerciales servies.</value>
+  </data>
+  <data name="A2151" xml:space="preserve">
+    <value>Jetons de présence.</value>
+  </data>
+  <data name="colorlegend_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\colorlegend_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A200" xml:space="preserve">
+    <value>Salaire non imposable</value>
+  </data>
+  <data name="A618" xml:space="preserve">
+    <value>Retenus à la source sur les ventes des entreprises industrielles et de commerce au profit des intervenants dans la distribution de biens et de produits et services qui ne dépassent pas 20.000 DT par an.</value>
+  </data>
+  <data name="A426" xml:space="preserve">
+    <value>Montant des retenues opérées </value>
+  </data>
+  <data name="09" xml:space="preserve">
+    <value>Nom et prénom ou raison sociale</value>
+  </data>
+  <data name="A418" xml:space="preserve">
+    <value>Montant de la plus-value immobilière.</value>
+  </data>
+  <data name="A115" xml:space="preserve">
+    <value>Date fin de la période de travail</value>
+  </data>
+  <data name="A215" xml:space="preserve">
+    <value>Jetons de présence, et actions et parts sociales.</value>
+  </data>
+  <data name="grid_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grid_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download_16x161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="addgroupfooter_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\addgroupfooter_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Import" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Import.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="printquick_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printquick_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A221" xml:space="preserve">
+    <value>Type des montants servis au titre des honoraires, commissions, courtages, loyers et rémunérations des activités non commerciales provenant des opérations d’exportation.</value>
+  </data>
+  <data name="cnss" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cnss.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="financial_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\financial_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exporttoxls_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exporttoxls_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A422" xml:space="preserve">
+    <value>Montant des revenues des valeurs mobilières y compris jetons de présence, actions et parts sociales</value>
+  </data>
+  <data name="Annexe5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A214" xml:space="preserve">
+    <value>Honoraires servis aux sociétés et aux personnes physiques soumises au régime réel</value>
+  </data>
+  <data name="A713" xml:space="preserve">
+    <value>Montants payés</value>
+  </data>
+  <data name="errBeneficiereIdent" xml:space="preserve">
+    <value>Veuillez vérifier le type d'identifiant du bénéficiaire!</value>
+  </data>
+  <data name="addgroupfooter_16x161" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\addgroupfooter_16x161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A613" xml:space="preserve">
+    <value>Montant des ventes aux P.P soumises à l’impôt sur le revenu selon le régime forfaitaire.</value>
+  </data>
+  <data name="Annexe4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A2131" xml:space="preserve">
+    <value>Le  Montant  brut  des  honoraires, commissions, courtages,  loyers  et rémunérations  des  activités  non
+commerciales</value>
+  </data>
+  <data name="calendrier" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calendrier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A519" xml:space="preserve">
+    <value>Retenues opérées sur les montants servis au titre des opérations réalisées avec les personnes n’ayant pas d’établissement en Tunisie et dont la retenue à la source au titre de la TVA est de 100%</value>
+  </data>
+  <data name="A619" xml:space="preserve">
+    <value>Montants perçus en espèces au titre des marchandises vendues et services rendus</value>
+  </data>
+  <data name="A314" xml:space="preserve">
+    <value>Intérêts des prêts payés aux établissements bancaires non établis en Tunisie</value>
+  </data>
+  <data name="A419" xml:space="preserve">
+    <value>Taux de plus-value de cession des actions, des parts sociales ou des parts de fonds prévues par la législation</value>
+  </data>
+  <data name="apply_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\apply_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A114" xml:space="preserve">
+    <value>Date début de la période de travail</value>
+  </data>
+  <data name="A216" xml:space="preserve">
+    <value>Rémunérations payées aux salariés et aux non salariés en contrepartie d’un travail occasionnel ou accidentel en dehors de leur activité principale</value>
+  </data>
+  <data name="A220" xml:space="preserve">
+    <value>Honoraires servis aux bureaux d’études exportateurs</value>
+  </data>
+  <data name="download_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A198" xml:space="preserve">
+    <value>Retenue 1 % [2015]</value>
+  </data>
+  <data name="rec" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A312" xml:space="preserve">
+    <value>Intérêts des comptes spéciaux d’épargne ouverts auprès des banques et de la CENT</value>
+  </data>
+  <data name="A2152" xml:space="preserve">
+    <value>Actions et parts sociales.</value>
+  </data>
+  <data name="cancel_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancel_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A517" xml:space="preserve">
+    <value>Retenues sur la TVA au titre des Montants égaux ou supérieurs à 1000D y compris la TVA, payés par les entreprises et les établissements publics et soumis à la retenue à la source au titre de la TVA.</value>
+  </data>
+  <data name="archiver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\archiver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A316" xml:space="preserve">
+    <value>Montant net servi</value>
+  </data>
+  <data name="A417" xml:space="preserve">
+    <value>Taux de plus-value immobilière.</value>
+  </data>
+  <data name="A199" xml:space="preserve">
+    <value>Contribution conjoncturelle [2014]</value>
+  </data>
+  <data name="deletelist_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\deletelist_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A218" xml:space="preserve">
+    <value>Loyers des Hôtels payés aux sociétés et aux personnes physiques soumises au régime réel</value>
+  </data>
+  <data name="A712" xml:space="preserve">
+    <value>Type des montants payés</value>
+  </data>
+  <data name="A4222" xml:space="preserve">
+    <value>Jetons de Présence</value>
+  </data>
+  <data name="A2132" xml:space="preserve">
+    <value>Les commissions  des  distributeurs agrées  des  opérateurs téléphoniques.</value>
+  </data>
+  <data name="close_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="errBeneficiaireActivite" xml:space="preserve">
+    <value>Veuillez vérifier l'activite du bénéficiaire!</value>
+  </data>
+  <data name="A118" xml:space="preserve">
+    <value>Valeur des avantages en nature</value>
+  </data>
+  <data name="errBeneficiaireType" xml:space="preserve">
+    <value>Veuillez vérifier le type d'identifiant du bénéficiaire!</value>
+  </data>
+  <data name="tableofcontent_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tableofcontent_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="financial_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\financial_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grid_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grid_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A121" xml:space="preserve">
+    <value>Montant des retenues opérées selon le régime commun</value>
+  </data>
+  <data name="A518" xml:space="preserve">
+    <value>Montants servis au titre des opérations réalisées avec les personnes n’ayant pas d’établissement en Tunisie et dont la retenue à la source au titre de la TVA est de 100%</value>
+  </data>
+  <data name="A224" xml:space="preserve">
+    <value>Montant net servi</value>
+  </data>
+  <data name="A416" xml:space="preserve">
+    <value>Montant des honoraires servis aux personnes non résidentes qui réalisent des travaux de construction ou des opérations de montage ou des services de contrôles connexes ou d’autres services pour une période ne dépassant pas 6 mois.</value>
+  </data>
+  <data name="A217" xml:space="preserve">
+    <value>Plus-value immobilière (prix de l’immeuble déclaré dans l’acte)</value>
+  </data>
+  <data name="exporttotxt_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exporttotxt_16x161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cancel_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancel_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A420" xml:space="preserve">
+    <value>Montant plus-value de cession des actions, des parts sociales ou des parts de fonds prévues par la législation</value>
+  </data>
+  <data name="a3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="errBeneficiaireAdresse" xml:space="preserve">
+    <value>Veuillez vérifier l'adresse du bénéficiaire!</value>
+  </data>
+  <data name="addchartpane_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\addchartpane_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A516" xml:space="preserve">
+    <value>Montants égaux ou supérieurs à 1000D y compris la TVA, payés par les entreprises et les établissements publics, et soumis à la retenue à la source au titre de la TVA.</value>
+  </data>
+  <data name="A614" xml:space="preserve">
+    <value>Montant de l’avance due sur les ventes aux P.P soumises à l’impôt sur le revenu selon le régime forfaitaire</value>
+  </data>
+  <data name="Nouveau" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nouveau.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A414" xml:space="preserve">
+    <value>Montant brut servi au titre des honoraires, commissions,
+montants servis aux non résidents établis en Tunisie et qui ne
+procèdent pas au dépôt de la déclaration d’existence, ...</value>
+  </data>
+  <data name="A119" xml:space="preserve">
+    <value>Total du revenu brut imposable</value>
+  </data>
+  <data name="A219" xml:space="preserve">
+    <value>Rémunérations servies aux artistes et créateurs</value>
+  </data>
+  <data name="BC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Annexe7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A113" xml:space="preserve">
+    <value>Nombre d’enfants à charge</value>
+  </data>
+  <data name="A213" xml:space="preserve">
+    <value>Le Montant brut des honoraires, commissions, courtages, loyers, rémunérations payées en contre partie de la performance dans la prestation et rémunérations des activités non commerciales servis à des personnes résidentes et établies.</value>
+  </data>
+  <data name="exporttoxlsx_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exporttoxlsx_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A4221" xml:space="preserve">
+    <value>Montant  des  revenus  de  valeurs</value>
+  </data>
+  <data name="A514" xml:space="preserve">
+    <value>Montants égaux ou supérieurs à 1000D y compris la TVA payés au titre des autres opérations</value>
+  </data>
+  <data name="A616" xml:space="preserve">
+    <value>Retenue à la source au titre des revenus au titre des jeux de pari de hasard et de loterie.</value>
+  </data>
+  <data name="A412" xml:space="preserve">
+    <value>Type des Montants servis au titre des honoraires, commissions, courtages, loyers, rémunérations des activités non commerciales et autres revenus</value>
+  </data>
+  <data name="save_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save_16x161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A714" xml:space="preserve">
+    <value>Retenue à la source</value>
+  </data>
+  <data name="paste_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paste_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Annexe3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="print_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\print_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exporttotxt_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exporttotxt_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="valid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\valid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A122" xml:space="preserve">
+    <value>Montant des retenues opérées au taux de 20%</value>
+  </data>
+  <data name="exporttoxls_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exporttoxls_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="errTypeMontantServi" xml:space="preserve">
+    <value>Veuillez vérifier le type du montant servis! [{0}]</value>
+  </data>
+  <data name="A424" xml:space="preserve">
+    <value>Le montant brut des honoraires, commissions, courtages, loyers et rémunérations des activités non commerciales provenant des opérations d’exportation.</value>
+  </data>
+  <data name="Annexe1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="colorlegend_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\colorlegend_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="11" xml:space="preserve">
+    <value>Dernière adresse du bénéficiaire</value>
+  </data>
+  <data name="a2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A124" xml:space="preserve">
+    <value>Montant des traitements et salaires prélevés au titre de la contribution conjoncturelle.</value>
+  </data>
+  <data name="A715" xml:space="preserve">
+    <value>Montant net servi</value>
+  </data>
+  <data name="Archiv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Archiv.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_16x161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A515" xml:space="preserve">
+    <value>Retenue sur les montants égaux ou supérieurs à 1000D y compris la TVA payés au titre des autres opérations</value>
+  </data>
+  <data name="A615" xml:space="preserve">
+    <value>Montant des revenus au titre des jeux de pari de hasard et de loterie</value>
+  </data>
+  <data name="A415" xml:space="preserve">
+    <value>Taux des honoraires servis aux personnes non résidentes qui réalisent des travaux de construction ou des opérations de montage ou des services de contrôles connexes ou d’autres services pour une période ne dépassant pas 6 mois.</value>
+  </data>
+  <data name="A106" xml:space="preserve">
+    <value>Numéro d’ordre</value>
+  </data>
+  <data name="Annexe2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Inbox_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Inbox_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A112" xml:space="preserve">
+    <value>Situation familiale du bénéficiaire</value>
+  </data>
+  <data name="A513" xml:space="preserve">
+    <value>Total des retenues sur les montants égaux ou supérieurs à 1000D y compris la TVA provenant des ventes des entreprises bénéficiant de la déduction des deux tiers des revenus et des ventes des sociétés soumises à l'impôt sur les sociétés aux taux de 10% </value>
+  </data>
+  <data name="A617" xml:space="preserve">
+    <value>Montant des ventes des entreprises industrielles et de de commerce au profit des intervenants dans la
+distribution de biens et de produits et services qui ne dépassent pas 20.000 DT par an.</value>
+  </data>
+  <data name="A413" xml:space="preserve">
+    <value>Taux des Montants servis au titre des honoraires, commissions,
+montants servis aux non résidents établis en Tunisie et qui ne
+procèdent pas au dépôt de la déclaration d’existence, ...</value>
+  </data>
+  <data name="Supprimer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Supprimer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="addchartpane_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\addchartpane_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A425" xml:space="preserve">
+    <value>Le montant des rémunérations ou revenus servis à des personnes résidentes ou établies dans un Etat ou un territoire dont le régime fiscal est privilégié</value>
+  </data>
+  <data name="bocontact2_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bocontact2_16x161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="deleteheader_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\deleteheader_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exporttoxlsx_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exporttoxlsx_16x161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A212" xml:space="preserve">
+    <value>Type des montants servis au titre des honoraires, commissions,
+courtages, loyers, rémunérations payées en contre partie de la performance dans la prestation, et rémunérations des activités non commerciales servis à des personnes résidentes et établies.</value>
+  </data>
+  <data name="A123" xml:space="preserve">
+    <value>Montant net servi</value>
+  </data>
+  <data name="A4202" xml:space="preserve">
+    <value>Jetons de présence.</value>
+  </data>
+  <data name="A223" xml:space="preserve">
+    <value>Montant des retenues opérées</value>
+  </data>
+  <data name="deletelist_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\deletelist_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="preview_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\preview_16x161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A427" xml:space="preserve">
+    <value>Montant net servi</value>
+  </data>
+  <data name="Annexe6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A116" xml:space="preserve">
+    <value>Durée de la période en nombre de jours</value>
+  </data>
+  <data name="A520" xml:space="preserve">
+    <value>Montant net servi</value>
+  </data>
+  <data name="A4223" xml:space="preserve">
+    <value>Actions et parts sociales</value>
+  </data>
+  <data name="apply_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\apply_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="deleteheader_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\deleteheader_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="10" xml:space="preserve">
+    <value>Activité</value>
+  </data>
+  <data name="errMontantInvalid" xml:space="preserve">
+    <value>Montant invalide [{0}]!</value>
+  </data>
+  <data name="A120" xml:space="preserve">
+    <value>Revenu réinvesti</value>
+  </data>
+  <data name="paste_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paste_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A421" xml:space="preserve">
+    <value>Taux de revenues des valeurs
+mobilières y compris jetons de présence, actions et parts sociales.</value>
+  </data>
+  <data name="08" xml:space="preserve">
+    <value>Identifiant bénéficiaire</value>
+  </data>
+  <data name="add_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="07" xml:space="preserve">
+    <value>Nature de l’identifiant</value>
+  </data>
+  <data name="A222" xml:space="preserve">
+    <value>Le Montant brut des honoraires, commissions, courtages, loyers et rémunérations des activités non commerciales provenant des opérations d’exportation.</value>
+  </data>
+  <data name="a7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exporttocsv_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exporttocsv_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A201" xml:space="preserve">
+    <value>La contribution sociale de solidarité due sur les traitements, salaires, rémunérations, indemnités[2018]</value>
+  </data>
+  <data name="IntereDetectible" xml:space="preserve">
+    <value>Intere Detectible</value>
+  </data>
+  <data name="ChefFamille" xml:space="preserve">
+    <value> Chef Famille</value>
+  </data>
+</root>
