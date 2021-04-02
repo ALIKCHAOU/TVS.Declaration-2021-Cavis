@@ -245,7 +245,7 @@ namespace TVS.Module.Employee.Models
         public decimal ContributionSocialeSolidarite { get; set; }
 
         [Description("ChefFamille")]
-        [Zone("ChefFamille", 15, 435, ZoneType.I, true)]
+        [Zone("ChefFamille", 15, 435, ZoneType.X, true)]
         public string ChefFamille { get; set; }
 
         [Description("IntereDetectible")]
