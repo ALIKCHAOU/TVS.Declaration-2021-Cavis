@@ -258,7 +258,7 @@ namespace TVS.Module.Employee.Services
             }
         }
 
-        public void Exporter2019(IAnnexe<LigneAnnexeUn, PiedAnnexeUn> lst, string directory)
+        public void Exporter2019(IAnnexe<LigneAnnexeUn, PiedAnnexeUn> lst, string directory, string Annee)
         {
             try
             {
@@ -278,7 +278,7 @@ namespace TVS.Module.Employee.Services
                 result += lst.Entete.SocieteCle.ToString();
                 result += lst.Entete.SocieteCategorie.ToString();
                 result += lst.Entete.SocieteNumeroEtablissement.ToString().PadLeft(3, '0').Substring(0, 3);
-                result += "2019";
+                result += Annee;
                 result += "An1";
                 result += ((int)lst.Entete.CodeActe).ToString();
                 result += lst.Lignes.Count().ToString().PadLeft(6, '0');
@@ -307,7 +307,7 @@ namespace TVS.Module.Employee.Services
                     result += lst.Entete.SocieteCle.ToString();
                     result += lst.Entete.SocieteCategorie.ToString();
                     result += lst.Entete.SocieteNumeroEtablissement.ToString().PadLeft(3, '0').Substring(0, 3);
-                    result += "2019";
+                    result += Annee;
                     result += i.ToString().PadLeft(6, '0');
                     result += (int)lig.BeneficiaireType;
                     result += lig.BeneficiaireIdent.PadRight(13, ' ');
@@ -341,7 +341,7 @@ namespace TVS.Module.Employee.Services
                 result += lst.Entete.SocieteCle.ToString();
                 result += lst.Entete.SocieteCategorie.ToString();
                 result += lst.Entete.SocieteNumeroEtablissement.ToString().PadLeft(3, '0').Substring(0, 3);
-                result += "2019";
+                result += Annee;
                 result += string.Empty.PadRight(242, ' ');
                 result += string.Format("{0:0}", totalRevImp * 1000).PadLeft(15, '0');
                 result += string.Format("{0:0}", totalAvNatur * 1000).PadLeft(15, '0');
@@ -386,9 +386,9 @@ namespace TVS.Module.Employee.Services
                 Exporter2018(annexe , directory);
                 return;
             }
-            if (_exercice.Annee == "2019")
+            if (_exercice.Annee == "2019" || _exercice.Annee == "2020")
             {
-                Exporter2019(annexe, directory);
+                Exporter2019(annexe, directory, _exercice.Annee);
                 return;
             }
 

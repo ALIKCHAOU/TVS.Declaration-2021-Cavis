@@ -1050,7 +1050,7 @@ namespace TVS.Module.Employee.Services
                 };
                 return annexeRecap;
             }
-            else if (_exercice.Annee == "2019")
+            else if (_exercice.Annee == "2019" || _exercice.Annee == "2020")
             {
                 /************2019********************/
           
@@ -3989,7 +3989,7 @@ namespace TVS.Module.Employee.Services
                     str.AppendLine(newline);
                     continue;
                 }
-                if (_exercice.Annee == "2019" && ligne.Name == "DECEMP03")
+                if ((_exercice.Annee == "2019" && ligne.Name == "DECEMP03") || (_exercice.Annee == "2020" && ligne.Name == "DECEMP03"))
                 {
                     string lig = AnnexeEnregistementHelper.GetEnregistrementRecapText(ligne);
                     string total = lig.Substring(23, 15);
